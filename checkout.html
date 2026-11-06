@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="100% Secure Checkout for Mayuri Jewels & Bangles. Complete your imitation jewellery, festive bangles, and imperial bridal suite order with pan-India insured express delivery.">
+  <title>Checkout &amp; Order Confirmation | Mayuri Jewels &amp; Bangles</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23c99326'/><circle cx='50' cy='50' r='38' fill='%2385142b'/><path d='M50 20 L58 42 L80 50 L58 58 L50 80 L42 58 L20 50 L42 42 Z' fill='%23fef8e7'/></svg>">
+  <link rel="alternate icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+  <!-- STICKY MASTER NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-jewel sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-wrap">
+          <i class="bi bi-gem"></i>
+        </div>
+        <div>
+          <span class="brand-title">Mayuri</span>
+          <span class="brand-sub">Jewels &amp; Bangles</span>
+        </div>
+      </a>
+
+      <!-- Mobile Action Controls -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button type="button" class="control-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <button type="button" class="control-btn" data-bs-toggle="modal" data-bs-target="#wishlistModal" aria-label="View Wishlist" title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="control-badge wishlist-count-badge" style="display: none;">0</span>
+        </button>
+        <button type="button" class="control-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-label="View Shopping Cart" title="Cart">
+          <i class="bi bi-bag"></i>
+          <span class="control-badge cart-count-badge" style="display: none;">0</span>
+        </button>
+        <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2 text-gold"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door me-2 text-gold"></i> Home 1 — General Store</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars me-2 text-gold"></i> Home 2 — Festive &amp; Bridal</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bridal-sets.html">Bridal Sets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="offers.html">Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Desktop Action Controls -->
+        <div class="d-none d-lg-flex align-items-center gap-2">
+          <button type="button" class="control-btn theme-toggle-btn" title="Toggle Light and Dark Mode" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <button type="button" class="control-btn rtl-toggle-btn" title="Toggle RTL Layout" aria-label="Toggle RTL">
+            <span class="dir-text fw-bold" style="font-size: 0.75rem;">RTL</span>
+          </button>
+          <button type="button" class="control-btn" data-bs-toggle="modal" data-bs-target="#wishlistModal" title="View Wishlist" aria-label="Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="control-badge wishlist-count-badge" style="display: none;">0</span>
+          </button>
+          <button type="button" class="control-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" title="View Cart" aria-label="Cart">
+            <i class="bi bi-bag"></i>
+            <span class="control-badge cart-count-badge" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CHECKOUT PAGE HEADER -->
+  <header class="page-header-banner header-bg-shop">
+    <div class="container text-center">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center small mb-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+        </ol>
+      </nav>
+      <span class="section-subtitle">100% Encrypted &amp; Insured</span>
+      <h1 class="display-5 fw-bold mb-2">Checkout &amp; Order Confirmation</h1>
+      <div class="section-divider"><i class="bi bi-flower1"></i></div>
+      <p class="mx-auto" style="max-width: 620px;">
+        Complete your royal jewellery purchase with complimentary pan-India insured shipping, authentic micron electroplating guarantee, and flexible payment options.
+      </p>
+    </div>
+  </header>
+
+  <!-- CHECKOUT MAIN SECTION -->
+  <main class="section-padding">
+    <div class="container">
+      <div class="row g-4">
+        <!-- LEFT COLUMN: CHECKOUT MULTI-STEP FORM -->
+        <div class="col-lg-7">
+          <form id="checkoutOrderForm" novalidate>
+            <!-- Step 1: Customer Contact Information -->
+            <div class="checkout-card">
+              <div class="checkout-step-title">
+                <span class="checkout-step-badge">1</span>
+                <span>Customer Contact Information</span>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="checkoutName" class="form-label small fw-bold">Full Name <span class="text-crimson">*</span></label>
+                  <input type="text" class="form-control" id="checkoutName" placeholder="e.g. Radhika Sharma" required>
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="checkoutPhone" class="form-label small fw-bold">Phone Number <span class="text-crimson">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-cream text-dark border">+91</span>
+                    <input type="tel" class="form-control" id="checkoutPhone" placeholder="9840012345" maxlength="10" required>
+                  </div>
+                  <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
+                </div>
+                <div class="col-12">
+                  <label for="checkoutEmail" class="form-label small fw-bold">Email Address (for Dispatch &amp; Invoice) <span class="text-crimson">*</span></label>
+                  <input type="email" class="form-control" id="checkoutEmail" placeholder="e.g. radhika@example.com" required>
+                  <div class="invalid-feedback">Please provide a valid email address.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Shipping & Delivery Address -->
+            <div class="checkout-card">
+              <div class="checkout-step-title">
+                <span class="checkout-step-badge">2</span>
+                <span>Shipping &amp; Delivery Address</span>
+              </div>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="checkoutAddress" class="form-label small fw-bold">Street Address, Flat / House No. <span class="text-crimson">*</span></label>
+                  <input type="text" class="form-control" id="checkoutAddress" placeholder="e.g. Flat 402, Royal Palms, Heritage Road" required>
+                  <div class="invalid-feedback">Please enter your complete address.</div>
+                </div>
+                <div class="col-md-5">
+                  <label for="checkoutCity" class="form-label small fw-bold">City <span class="text-crimson">*</span></label>
+                  <input type="text" class="form-control" id="checkoutCity" placeholder="e.g. Mumbai" required>
+                  <div class="invalid-feedback">Please specify your city.</div>
+                </div>
+                <div class="col-md-4">
+                  <label for="checkoutState" class="form-label small fw-bold">State <span class="text-crimson">*</span></label>
+                  <select class="form-select" id="checkoutState" required>
+                    <option value="" selected disabled>Select State</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Delhi">Delhi NCR</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Other">Other State / UT</option>
+                  </select>
+                  <div class="invalid-feedback">Please select your state.</div>
+                </div>
+                <div class="col-md-3">
+                  <label for="checkoutPin" class="form-label small fw-bold">PIN Code <span class="text-crimson">*</span></label>
+                  <input type="text" class="form-control" id="checkoutPin" placeholder="400002" maxlength="6" required>
+                  <div class="invalid-feedback">Valid 6-digit PIN code required.</div>
+                </div>
+                <div class="col-12">
+                  <label for="checkoutLandmark" class="form-label small fw-bold">Nearby Landmark (Optional)</label>
+                  <input type="text" class="form-control" id="checkoutLandmark" placeholder="e.g. Opposite Diamond Market Gate 2">
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Delivery Speed Options -->
+            <div class="checkout-card">
+              <div class="checkout-step-title">
+                <span class="checkout-step-badge">3</span>
+                <span>Insured Delivery Speed</span>
+              </div>
+              <div class="form-check p-3 rounded border mb-2 bg-cream-subtle">
+                <input class="form-check-input ms-0 me-2" type="radio" name="shippingMethod" id="shipStandard" value="standard" checked>
+                <label class="form-check-label w-100 d-flex justify-content-between align-items-center" for="shipStandard">
+                  <div>
+                    <span class="fw-bold d-block">Standard Insured Courier (3-5 Business Days)</span>
+                    <span class="small text-muted">Complimentary on all orders. Fully insured transit with tamper-evident packaging.</span>
+                  </div>
+                  <span class="badge bg-success text-white">FREE</span>
+                </label>
+              </div>
+              <div class="form-check p-3 rounded border">
+                <input class="form-check-input ms-0 me-2" type="radio" name="shippingMethod" id="shipExpress" value="express">
+                <label class="form-check-label w-100 d-flex justify-content-between align-items-center" for="shipExpress">
+                  <div>
+                    <span class="fw-bold d-block">Express Air Courier (1-2 Business Days)</span>
+                    <span class="small text-muted">Priority dispatch via BlueDart Air / DTDC Express. Priority gift-wrapping included.</span>
+                  </div>
+                  <span class="fw-bold text-crimson">₹149</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 4: Payment Methods -->
+            <div class="checkout-card">
+              <div class="checkout-step-title">
+                <span class="checkout-step-badge">4</span>
+                <span>Select Payment Method</span>
+              </div>
+
+              <!-- UPI Option -->
+              <div class="payment-method-box selected">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="payUPI" value="upi" checked>
+                  <label class="form-check-label fw-bold d-flex justify-content-between align-items-center" for="payUPI">
+                    <span><i class="bi bi-qr-code-scan text-gold me-2"></i> UPI / QR Code (Google Pay, PhonePe, Paytm, BHIM)</span>
+                    <span class="badge bg-success-subtle text-success border border-success small">Instant 0% Fee</span>
+                  </label>
+                </div>
+                <div class="mt-2 ps-4 small text-muted">
+                  Scan QR code or enter your UPI ID at next screen for instantaneous bank-to-bank transfer.
+                </div>
+              </div>
+
+              <!-- Cards Option -->
+              <div class="payment-method-box">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="payCard" value="card">
+                  <label class="form-check-label fw-bold d-flex justify-content-between align-items-center" for="payCard">
+                    <span><i class="bi bi-credit-card-2-front text-gold me-2"></i> Credit / Debit Card (Visa, MasterCard, RuPay)</span>
+                    <span class="small text-muted"><i class="bi bi-lock-fill text-gold"></i> 256-Bit SSL</span>
+                  </label>
+                </div>
+                <div class="mt-2 ps-4 small text-muted">
+                  All major Indian and international debit/credit cards accepted with 3D Secure OTP verification.
+                </div>
+              </div>
+
+              <!-- Net Banking -->
+              <div class="payment-method-box">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="payNetBanking" value="netbanking">
+                  <label class="form-check-label fw-bold" for="payNetBanking">
+                    <i class="bi bi-bank text-gold me-2"></i> Net Banking (HDFC, SBI, ICICI, Axis, Kotak &amp; 40+ Banks)
+                  </label>
+                </div>
+              </div>
+
+              <!-- Cash on Delivery -->
+              <div class="payment-method-box">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="payCOD" value="cod">
+                  <label class="form-check-label fw-bold d-flex justify-content-between align-items-center" for="payCOD">
+                    <span><i class="bi bi-cash-stack text-gold me-2"></i> Cash on Delivery (COD)</span>
+                    <span class="badge bg-gold text-dark small">Verified Courier</span>
+                  </label>
+                </div>
+                <div class="mt-2 ps-4 small text-muted">
+                  Pay cash or via UPI to the delivery courier upon receiving your sealed jewellery parcel.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5: Complimentary Festive Gifting -->
+            <div class="checkout-card">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="giftPackagingCheck" checked>
+                <label class="form-check-label fw-bold" for="giftPackagingCheck">
+                  <i class="bi bi-gift-fill text-crimson me-1"></i> Complimentary Royal Velvet Box &amp; Festive Packaging
+                </label>
+                <div class="small text-muted mt-1">
+                  Every order includes signature velvet-lined protective cases and gold-embossed ribbon packaging at no additional cost.
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-gold btn-lg w-100 py-3 fw-bold shadow" id="btnPlaceOrder">
+              <i class="bi bi-shield-lock-fill me-2"></i>
+              <span id="btnPlaceOrderText">Place Order</span>
+            </button>
+
+            <!-- Trust Badges Under Button -->
+            <div class="row g-2 text-center mt-3 small text-muted">
+              <div class="col-6 col-md-3">
+                <i class="bi bi-truck text-gold d-block fs-5 mb-1"></i>
+                <span>Insured Transit</span>
+              </div>
+              <div class="col-6 col-md-3">
+                <i class="bi bi-award text-gold d-block fs-5 mb-1"></i>
+                <span>24K Micron Gold</span>
+              </div>
+              <div class="col-6 col-md-3">
+                <i class="bi bi-heart-pulse text-gold d-block fs-5 mb-1"></i>
+                <span>100% Skin-Safe</span>
+              </div>
+              <div class="col-6 col-md-3">
+                <i class="bi bi-arrow-repeat text-gold d-block fs-5 mb-1"></i>
+                <span>7-Day Exchange</span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- RIGHT COLUMN: ORDER SUMMARY & COUPONS -->
+        <div class="col-lg-5">
+          <div class="checkout-summary-box">
+            <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+              <h5 class="fw-bold mb-0">Order Summary</h5>
+              <span class="badge bg-gold text-dark fw-bold"><span id="checkoutItemCount">0</span> items</span>
+            </div>
+
+            <!-- Live Cart Items List -->
+            <div id="checkoutCartItems" class="mb-4" style="max-height: 380px; overflow-y: auto;">
+              <!-- Dynamically populated by main.js from localStorage cart -->
+            </div>
+
+            <!-- Coupon Code Section -->
+            <div class="mb-3">
+              <label for="checkoutCouponCode" class="form-label small fw-bold">Have a Festive Coupon Code?</label>
+              <div class="input-group">
+                <input type="text" class="form-control text-uppercase" id="checkoutCouponCode" placeholder="e.g. FESTIVE20">
+                <button type="button" class="btn btn-gold" id="btnApplyCoupon">Apply</button>
+              </div>
+              <div id="couponFeedback" class="small mt-1"></div>
+              <div class="small text-muted mt-1" style="font-size: 0.8rem;">
+                <i class="bi bi-info-circle me-1 text-gold"></i> Popular codes: <strong>FESTIVE20</strong> (20% OFF), <strong>ROYAL10</strong> (10% OFF)
+              </div>
+            </div>
+
+            <!-- Price Breakdown Calculation Table -->
+            <div class="border-top pt-3">
+              <div class="d-flex justify-content-between mb-2 small">
+                <span class="text-muted">Items Subtotal:</span>
+                <span class="fw-bold" id="checkoutSubtotal">₹0</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2 small text-success d-none" id="checkoutDiscountRow">
+                <span>Festive Coupon Discount:</span>
+                <span class="fw-bold" id="checkoutDiscount">-₹0</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2 small">
+                <span class="text-muted">Insured Courier Delivery:</span>
+                <span class="fw-bold text-success" id="checkoutShipping">FREE</span>
+              </div>
+              <div class="d-flex justify-content-between mb-3 small">
+                <span class="text-muted">GST &amp; Taxes:</span>
+                <span class="text-muted">Included (3%)</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                <span class="fw-bold fs-5">Total Payable:</span>
+                <span class="fw-bold fs-4 text-crimson" id="checkoutGrandTotal">₹0</span>
+              </div>
+            </div>
+
+            <!-- Help Notice -->
+            <div class="mt-4 p-3 bg-cream rounded small border text-muted">
+              <i class="bi bi-headset text-gold me-1"></i> Need custom bangle sizing or matching assistance before ordering? Call our stylists at <strong>+91 98400 12345</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ORDER SUCCESS CONFIRMATION MODAL -->
+  <div class="modal fade" id="orderSuccessModal" tabindex="-1" aria-labelledby="orderSuccessModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-gold">
+        <div class="modal-body text-center p-4 p-md-5">
+          <div class="order-success-icon">
+            <i class="bi bi-check2-circle"></i>
+          </div>
+          <span class="badge bg-gold text-dark mb-2 text-uppercase fw-bold letter-spacing-1">Order Confirmed</span>
+          <h3 class="display-6 fw-bold mb-2">Thank You for Your Order!</h3>
+          <p class="text-muted mb-4">
+            Congratulations, <strong id="orderConfirmedName">Valued Customer</strong>! Your royal jewellery ensemble is being carefully inspected, packed in signature velvet boxes, and prepared for insured transit.
+          </p>
+
+          <div class="bg-cream p-3 rounded text-start mb-4 border">
+            <div class="d-flex justify-content-between mb-1 small">
+              <span class="text-muted">Order Reference ID:</span>
+              <strong id="orderConfirmedId" class="text-crimson">MJB-2026-00000</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-1 small">
+              <span class="text-muted">Estimated Delivery:</span>
+              <strong>3-4 Business Days</strong>
+            </div>
+            <div class="d-flex justify-content-between small">
+              <span class="text-muted">Invoice Sent To:</span>
+              <strong id="orderConfirmedEmail">your.email@example.com</strong>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center">
+            <a href="shop.html" class="btn btn-gold btn-lg px-4"><i class="bi bi-bag-heart me-1"></i> Continue Shopping</a>
+            <a href="index.html" class="btn btn-outline-secondary btn-lg px-4"><i class="bi bi-house me-1"></i> Return Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFCANVAS CART DRAWER -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel">
+        <i class="bi bi-bag-heart text-gold me-2"></i>Shopping Bag (<span class="cart-count-badge">0</span>)
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column p-3">
+      <div class="free-shipping-card p-3 mb-3 rounded" style="background: var(--bg-secondary);">
+        <div class="d-flex justify-content-between small mb-1">
+          <span id="freeShippingText">Add items to unlock Free Shipping!</span>
+          <span class="fw-bold">₹1,999 Target</span>
+        </div>
+        <div class="progress" style="height: 6px;">
+          <div id="freeShippingProgress" class="progress-bar bg-gold" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div id="cartItemsContainer" class="flex-grow-1 overflow-auto pe-1"></div>
+
+      <div id="cartEmptyNotice" class="text-center py-5 my-auto" style="display: none;">
+        <i class="bi bi-bag-x display-4 text-muted mb-3 d-block"></i>
+        <h6 class="fw-bold">Your Bag is Empty</h6>
+        <p class="text-muted small">Explore our festive bangles and imperial necklace collections!</p>
+        <a href="shop.html" class="btn btn-gold btn-sm mt-2" data-bs-dismiss="offcanvas">Start Shopping</a>
+      </div>
+
+      <div id="cartFooter" class="border-top pt-3 mt-auto">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="text-muted">Subtotal:</span>
+          <span class="fw-bold" id="cartSubtotal">₹0</span>
+        </div>
+        <div class="d-flex justify-content-between mb-3">
+          <span class="fw-bold fs-5">Estimated Total:</span>
+          <span class="fw-bold fs-5 text-crimson" id="cartTotal">₹0</span>
+        </div>
+        <div class="d-grid gap-2">
+          <a href="checkout.html" class="btn btn-gold btn-lg btn-proceed-checkout" id="btnCheckout">
+            <i class="bi bi-lock-fill"></i> Proceed to Checkout
+          </a>
+          <a href="shop.html" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="offcanvas">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WISHLIST MODAL -->
+  <div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="wishlistModalLabel">
+            <i class="bi bi-heart-fill text-crimson me-2"></i>My Wishlist (<span class="wishlist-count-badge">0</span>)
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3">
+          <div id="wishlistItemsContainer"></div>
+          <div id="wishlistEmptyNotice" class="text-center py-5" style="display: none;">
+            <i class="bi bi-heart display-4 text-muted mb-3 d-block"></i>
+            <h6 class="fw-bold">Your Wishlist is Empty</h6>
+            <p class="text-muted small">Save your favourite bridal suites and kadas to view them anytime!</p>
+            <a href="shop.html" class="btn btn-gold btn-sm" data-bs-dismiss="modal">Browse Jewellery</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand mb-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="brand-icon-wrap">
+                <i class="bi bi-gem"></i>
+              </div>
+              <div>
+                <span class="brand-title">Mayuri</span>
+                <span class="brand-sub">Jewels &amp; Bangles</span>
+              </div>
+            </div>
+            <p class="text-muted small">
+              India's premier online destination for handcrafted imitation jewellery, festive bangles, temple haar, and imperial bridal sets.
+            </p>
+          </div>
+          <div class="social-links d-flex gap-2 mt-3">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index-2.html">Home 2 (Bridal)</a></li>
+            <li><a href="about.html">About Our Craft</a></li>
+            <li><a href="shop.html">Shop Catalogue</a></li>
+            <li><a href="bridal-sets.html">Bridal Sets</a></li>
+            <li><a href="offers.html">Festive Offers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-heading">Jewellery Categories</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?cat=Necklaces">Necklaces &amp; Chokers</a></li>
+            <li><a href="shop.html?cat=Bangles">Handcrafted Bangles</a></li>
+            <li><a href="shop.html?cat=Earrings">Jhumkas &amp; Chandbalis</a></li>
+            <li><a href="shop.html?cat=Bridal%20Sets">Bridal Jewellery Suites</a></li>
+            <li><a href="shop.html?cat=Traditional%20Jewellery">Temple Jewellery</a></li>
+            <li><a href="shop.html?cat=Party%20Wear%20Jewellery">Party &amp; Cocktail Wear</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading">Store &amp; Support</h5>
+          <ul class="footer-links">
+            <li class="d-flex align-items-start gap-2 text-muted small mb-2">
+              <i class="bi bi-geo-alt mt-1"></i>
+              <span>48, Zaveri Bazaar Heritage Lane, Kalbadevi, Mumbai 400002, India</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 text-muted small mb-2">
+              <i class="bi bi-telephone"></i>
+              <span>+91 98400 12345 / 022 2345 6789</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 text-muted small mb-2">
+              <i class="bi bi-envelope"></i>
+              <span>care@mayurijewels.com</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 text-muted small">
+              <i class="bi bi-clock"></i>
+              <span>Mon - Sat: 10:30 AM - 8:30 PM IST</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="small mb-0">&copy; 2026 Mayuri Jewels &amp; Bangles. All Rights Reserved.</p>
+        <div class="footer-legal-links d-flex align-items-center gap-4 small">
+          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms-of-care.html" class="footer-legal-link">Terms of Care</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Products Data -->
+  <script src="assets/js/products-data.js"></script>
+  <!-- Master Application Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+

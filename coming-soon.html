@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Royale Launch Coming Soon | Mayuri Jewels &amp; Bangles</title>
+  <meta name="description" content="Our exclusive Diwali &amp; Bridal Royale imitation jewellery collection is launching soon. Subscribe for VIP preview access and early festive discounts.">
+  <meta name="keywords" content="coming soon jewellery, bridal royale launch, imitation jewellery store, bangles launch, festive preview">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23c99326'/><circle cx='50' cy='50' r='38' fill='%2385142b'/><path d='M50 20 L58 42 L80 50 L58 58 L50 80 L42 58 L20 50 L42 42 Z' fill='%23fef8e7'/></svg>">
+
+  <!-- Bootstrap 5.3 CSS & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Single Fixed Navigation Bar -->
+  <nav class="navbar navbar-expand navbar-jewel sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-wrap"><i class="bi bi-gem"></i></div>
+        <div>
+          <span class="brand-title">Mayuri</span>
+          <span class="brand-sub">Jewels &amp; Bangles</span>
+        </div>
+      </a>
+
+      <!-- Quick Theme & RTL Controls -->
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="control-btn theme-toggle-btn" title="Toggle Light and Dark Mode" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
+        <button type="button" class="control-btn rtl-toggle-btn" title="Toggle RTL Layout" aria-label="Toggle RTL"><span class="dir-text fw-bold" style="font-size: 0.75rem;">RTL</span></button>
+        <a href="index.html" class="btn btn-gold btn-sm d-none d-sm-inline-flex"><i class="bi bi-house-door me-1"></i> Visit Store</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- COMING SOON HERO BACKGROUND -->
+  <main class="coming-soon-wrapper flex-grow-1 position-relative overflow-hidden" style="background-image: linear-gradient(rgba(18, 16, 21, 0.82), rgba(35, 12, 22, 0.88)), url('assets/images/bridal/bridal-regal-gold-designs.jpg');">
+    <div class="container position-relative py-5" style="z-index: 2;">
+      <div class="coming-soon-card">
+        <!-- Brand Emblem -->
+        <div class="brand-icon-wrap mx-auto mb-3" style="width: 58px; height: 58px; font-size: 1.6rem;">
+          <i class="bi bi-stars"></i>
+        </div>
+
+        <span class="badge bg-gold text-dark fw-bold px-3 py-2 mb-3 text-uppercase letter-spacing-1">Royal Collection Launch</span>
+        <h1 class="display-5 fw-bold mb-3">Our Grand Diwali &amp; Wedding Royale Collection is Arriving Soon</h1>
+        <div class="section-divider"><i class="bi bi-flower1"></i></div>
+
+        <p class="section-desc mb-4">
+          Our master artisans across Jaipur, Hyderabad, and Firozabad are placing the finishing touches on over 150 brand-new heirloom designs: intricate Jadau Kundan chokers, temple Kasu haars, glass &amp; lac bridal chooda sets, and handcrafted peacock jhumkas.
+        </p>
+
+        <!-- Live Countdown Timer -->
+        <div class="p-3 p-md-4 rounded-4 mb-4" style="background: var(--bg-secondary); border: 1.5px dashed var(--gold-primary);">
+          <div class="small fw-bold text-muted text-uppercase mb-3 letter-spacing-1">
+            <i class="bi bi-clock-history text-crimson me-1"></i> Launch Unveiling Countdown
+          </div>
+          <div class="countdown-container" data-countdown="2026-11-25T18:00:00">
+            <div class="countdown-box">
+              <span class="countdown-num timer-days">19</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-num timer-hours">11</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-num timer-mins">28</span>
+              <span class="countdown-label">Mins</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-num timer-secs">45</span>
+              <span class="countdown-label">Secs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIP Notify Sign-Up Form -->
+        <div class="max-w-500 mx-auto mb-4" style="max-width: 520px;">
+          <h6 class="fw-bold mb-2">Be the First to Access VIP Early-Bird Discounts:</h6>
+          <form id="comingSoonNotifyForm" class="d-flex flex-column flex-sm-row gap-2">
+            <input type="email" id="notifyEmail" class="form-control" placeholder="Enter your email for private preview..." required aria-label="Email address for VIP preview">
+            <button type="submit" class="btn btn-gold text-nowrap">
+              <i class="bi bi-bell-fill me-1"></i> Notify Me
+            </button>
+          </form>
+          <div id="notifySuccessAlert" class="mt-3 d-none"></div>
+          <span class="small text-muted d-block mt-2" style="font-size: 0.78rem;">
+            <i class="bi bi-shield-check text-gold me-1"></i> No spam ever. Receive 1 exclusive invitation code with 20% launch discount.
+          </span>
+        </div>
+
+        <!-- Boutique Contact Information -->
+        <div class="pt-4 border-top border-subtle">
+          <h6 class="text-uppercase fw-bold text-muted small mb-3 letter-spacing-1">Need Immediate Styling Assistance or Custom Orders?</h6>
+          <div class="row g-3 text-start small">
+            <div class="col-md-4">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-geo-alt-fill text-gold fs-5"></i>
+                <div>
+                  <strong>Boutique Atelier</strong>
+                  <div class="text-muted">Zaveri Bazaar, Mumbai</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-whatsapp text-gold fs-5"></i>
+                <div>
+                  <strong>WhatsApp Stylist</strong>
+                  <div class="text-muted">+91 98201 44520</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-envelope-check-fill text-gold fs-5"></i>
+                <div>
+                  <strong>VIP Concierge</strong>
+                  <div class="text-muted">contact@mayurijewels.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Return to Home CTA -->
+        <div class="mt-4 pt-2">
+          <a href="index.html" class="btn btn-outline-crimson">
+            <i class="bi bi-arrow-left me-2"></i> Browse Current Collections on Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Clean Minimal Footer -->
+  <footer class="py-3 bg-dark text-center small border-top border-secondary">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+      <div>&copy; 2026 Mayuri Jewels &amp; Bangles. All Rights Reserved.</div>
+      <div class="footer-legal-links d-flex align-items-center gap-4">
+        <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+        <a href="terms-of-care.html" class="footer-legal-link">Terms of Care</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-card border-gold">
+        <div class="modal-header border-bottom border-subtle">
+          <h5 class="modal-title fw-bold" id="privacyPolicyModalLabel">
+            <i class="bi bi-shield-lock-fill text-gold me-2"></i> Privacy Policy
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 small">
+          <h6 class="fw-bold mb-2">1. Information Collection</h6>
+          <p class="text-muted mb-3">We collect customer names, shipping addresses, phone numbers, and email IDs solely to fulfill jewellery orders, provide dispatch tracking, and send requested styling consultations.</p>
+
+          <h6 class="fw-bold mb-2">2. Payment Security</h6>
+          <p class="text-muted mb-3">We do not store your debit/credit card numbers or UPI PINs. All financial transactions are processed securely through certified, encrypted 256-bit payment gateways.</p>
+
+          <h6 class="fw-bold mb-2">3. Zero Third-Party Sharing</h6>
+          <p class="text-muted mb-3">Your personal contact information is never sold, leased, or distributed to any third-party marketing agencies.</p>
+
+          <h6 class="fw-bold mb-2">4. Cookies &amp; Preferences</h6>
+          <p class="text-muted mb-0">We use local browser storage strictly to preserve your cart items, saved wishlist, and theme preferences across visits.</p>
+        </div>
+        <div class="modal-footer border-top border-subtle">
+          <button type="button" class="btn btn-gold btn-sm" data-bs-dismiss="modal">I Understand</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms of Care Modal -->
+  <div class="modal fade" id="termsOfCareModal" tabindex="-1" aria-labelledby="termsOfCareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-card border-gold">
+        <div class="modal-header border-bottom border-subtle">
+          <h5 class="modal-title fw-bold" id="termsOfCareModalLabel">
+            <i class="bi bi-gem text-gold me-2"></i> Terms of Care &amp; Service
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 small">
+          <h6 class="fw-bold mb-2">1. Jewellery Care Instructions</h6>
+          <p class="text-muted mb-3">Keep all imitation, Kundan, and lac jewellery away from direct contact with perfumes, sanitizers, hairsprays, and water. Wipe gently with a dry, soft cotton cloth after every wear before storing.</p>
+
+          <h6 class="fw-bold mb-2">2. Storage Recommendation</h6>
+          <p class="text-muted mb-3">Always store ornaments in airtight ziplock pouches or inside the complimentary Mayuri velvet box. Avoid velvet foam cases that retain atmospheric moisture.</p>
+
+          <h6 class="fw-bold mb-2">3. 7-Day Replacement Guarantee</h6>
+          <p class="text-muted mb-3">In the unlikely event of damage during transit, record an unboxing video and report it to our customer care within 7 days of delivery for immediate, hassle-free replacement.</p>
+
+          <h6 class="fw-bold mb-2">4. Plating &amp; Color Longevity</h6>
+          <p class="text-muted mb-0">Our 24K and antique micron plating is engineered for long-lasting festive wear. Natural oxidation depends on skin chemistry and humidity; proper care ensures years of radiant shine.</p>
+        </div>
+        <div class="modal-footer border-top border-subtle">
+          <button type="button" class="btn btn-gold btn-sm" data-bs-dismiss="modal">Close &amp; Continue Shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jewel-toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

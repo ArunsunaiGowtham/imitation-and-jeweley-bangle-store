@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mayuri Jewels &amp; Bangles | Handcrafted Imitation &amp; Bridal Jewellery Store</title>
+  <meta name="description" content="Discover vibrant imitation jewellery, bridal necklace sets, handcrafted bangles, and festive jhumkas. Premium Indian artificial jewellery with 24K gold plating and skin-safe alloys.">
+  <meta name="keywords" content="imitation jewellery, artificial jewellery, bridal sets, bangles, necklaces, jhumkas, temple jewellery, kundan choker, silk thread bangles">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23c99326'/><circle cx='50' cy='50' r='38' fill='%2385142b'/><path d='M50 20 L58 42 L80 50 L58 58 L50 80 L42 58 L20 50 L42 42 Z' fill='%23fef8e7'/></svg>">
+
+  <!-- Bootstrap 5.3 CSS & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Single Fixed Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-jewel sticky-top">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-wrap">
+          <i class="bi bi-gem"></i>
+        </div>
+        <div>
+          <span class="brand-title">Mayuri</span>
+          <span class="brand-sub">Jewels &amp; Bangles</span>
+        </div>
+      </a>
+
+      <!-- Mobile Action Controls -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button type="button" class="control-btn theme-toggle-btn" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <button type="button" class="control-btn rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle RTL">
+          <span class="dir-text fw-bold" style="font-size: 0.72rem;">RTL</span>
+        </button>
+        <button type="button" class="control-btn" data-bs-toggle="modal" data-bs-target="#wishlistModal" aria-label="View Wishlist" title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="control-badge wishlist-count-badge" style="display: none;">0</span>
+        </button>
+        <button type="button" class="control-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-label="View Shopping Cart" title="Cart">
+          <i class="bi bi-bag"></i>
+          <span class="control-badge cart-count-badge" style="display: none;">0</span>
+        </button>
+        <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2 text-gold"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+              <li><a class="dropdown-item active" href="index.html"><i class="bi bi-house-door me-2 text-gold"></i> Home 1 — General Store</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars me-2 text-gold"></i> Home 2 — Festive &amp; Bridal</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bridal-sets.html">Bridal Sets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="offers.html">Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Desktop Action Controls -->
+        <div class="d-none d-lg-flex align-items-center gap-2">
+          <button type="button" class="control-btn theme-toggle-btn" title="Toggle Light and Dark Mode" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <button type="button" class="control-btn rtl-toggle-btn" title="Toggle RTL Layout" aria-label="Toggle RTL">
+            <span class="dir-text fw-bold" style="font-size: 0.75rem;">RTL</span>
+          </button>
+          <button type="button" class="control-btn" data-bs-toggle="modal" data-bs-target="#wishlistModal" title="View Wishlist" aria-label="Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="control-badge wishlist-count-badge" style="display: none;">0</span>
+          </button>
+          <button type="button" class="control-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" title="View Cart" aria-label="Cart">
+            <i class="bi bi-bag"></i>
+            <span class="control-badge cart-count-badge" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN HERO BANNER (HOME 1) -->
+  <header class="hero-home1">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <span class="section-subtitle"><i class="bi bi-sparkles text-gold me-1"></i> Festive &amp; Bridal Heritage Collection 2026</span>
+          <h1 class="hero-title">
+            Exquisite <span class="text-gold">Imitation Jewellery</span> &amp; Festive Bangles
+          </h1>
+          <p class="hero-tagline">
+            Celebrate life's grandest moments with authentic Indian craftsmanship. Handcrafted Kundan chokers, temple malas, vibrant glass &amp; lac bangles, and regal bridal sets plated in 24K gold finish.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="shop.html" class="btn btn-gold btn-lg">
+              <i class="bi bi-bag-check"></i> Explore Collections
+            </a>
+            <a href="bridal-sets.html" class="btn btn-outline-crimson btn-lg">
+              <i class="bi bi-gem"></i> Bridal Sets
+            </a>
+          </div>
+          <!-- Trust Marks -->
+          <div class="d-flex flex-wrap gap-4 pt-3 border-top border-subtle">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-patch-check-fill text-gold fs-4"></i>
+              <div class="small lh-sm">
+                <div class="fw-bold">24K Micron Gold</div>
+                <div class="text-muted">Long-lasting shine</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-truck text-gold fs-4"></i>
+              <div class="small lh-sm">
+                <div class="fw-bold">Free Insured Shipping</div>
+                <div class="text-muted">On orders over ₹1,499</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-arrow-repeat text-gold fs-4"></i>
+              <div class="small lh-sm">
+                <div class="fw-bold">7-Day Easy Return</div>
+                <div class="text-muted">100% Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-visual-frame position-relative">
+            <img src="assets/images/hero/hero-home-1.jpg" alt="Indian bride adorned with royal imitation necklace and bangles" class="img-fluid">
+            <div class="hero-floating-badge">
+              <span class="badge bg-crimson text-white mb-1">HANDCRAFTED</span>
+              <h6 class="fw-bold mb-1">Authentic Royal Finish</h6>
+              <p class="text-muted small mb-0">Over 50,000+ delighted brides &amp; festive celebrations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST PILLARS SECTION -->
+  <section class="py-5 bg-cream">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-3 col-sm-6 d-flex align-items-stretch">
+          <div class="trust-pillar-card w-100 h-100">
+            <div class="trust-icon-box">
+              <i class="bi bi-award"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Artisanal Craftsmanship</h5>
+            <p class="text-muted small mb-0">Handmade by master artisans with intricate jadau, meenakari, and filigree setting.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 d-flex align-items-stretch">
+          <div class="trust-pillar-card w-100 h-100">
+            <div class="trust-icon-box">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Hypoallergenic &amp; Safe</h5>
+            <p class="text-muted small mb-0">100% skin-safe copper &amp; brass alloy, completely nickel and lead free.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 d-flex align-items-stretch">
+          <div class="trust-pillar-card w-100 h-100">
+            <div class="trust-icon-box">
+              <i class="bi bi-box2-heart"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Keepsake Luxury Box</h5>
+            <p class="text-muted small mb-0">Every jewel arrives in an anti-tarnish velvet gift box, ready for treasured storage.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 d-flex align-items-stretch">
+          <div class="trust-pillar-card w-100 h-100">
+            <div class="trust-icon-box">
+              <i class="bi bi-headset"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Dedicated Stylist Advice</h5>
+            <p class="text-muted small mb-0">Personalized jewellery styling assistance via WhatsApp for your bridal blouses &amp; lehengas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY QUICK EXPLORER -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Curated Categories</span>
+        <h2 class="section-title">Shop by Jewellery Silhouette</h2>
+        <div class="section-divider"><i class="bi bi-flower1"></i></div>
+        <p class="section-desc">Browse our curated catalogue of traditional and contemporary imitation jewellery designed for festive celebrations and everyday elegance.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Necklaces -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+          <div class="category-strip-card w-100">
+            <img src="assets/images/banners/banner-necklaces.png" alt="Handcrafted Necklaces Collection">
+            <div class="category-strip-overlay">
+              <h4 class="category-strip-title">Necklaces</h4>
+              <p class="small text-light mb-2">Chokers, Temple Malas &amp; Raani Haars</p>
+              <a href="shop.html?cat=Necklaces" class="category-strip-link">
+                Explore Collection <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Bangles -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+          <div class="category-strip-card w-100">
+            <img src="assets/images/banners/banner-bangles.png" alt="Handcrafted Bangles Collection">
+            <div class="category-strip-overlay">
+              <h4 class="category-strip-title">Bangles</h4>
+              <p class="small text-light mb-2">Lac, Glass, Silk &amp; Temple Kadas</p>
+              <a href="shop.html?cat=Bangles" class="category-strip-link">
+                Explore Collection <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Earrings -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+          <div class="category-strip-card w-100">
+            <img src="assets/images/banners/banner-earrings.png" alt="Handcrafted Earrings Collection">
+            <div class="category-strip-overlay">
+              <h4 class="category-strip-title">Earrings</h4>
+              <p class="small text-light mb-2">Jhumkas, Chandbalis &amp; Solitaires</p>
+              <a href="shop.html?cat=Earrings" class="category-strip-link">
+                Explore Collection <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Bridal Sets -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+          <div class="category-strip-card w-100">
+            <img src="assets/images/bridal/bridal-traditional-ensemble-set.jpg" alt="Grand Bridal Sets Collection">
+            <div class="category-strip-overlay">
+              <h4 class="category-strip-title">Bridal Sets</h4>
+              <p class="small text-light mb-2">Complete 7-Piece Wedding Suites</p>
+              <a href="bridal-sets.html" class="category-strip-link">
+                Explore Collection <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BESTSELLING JEWELLERY SECTION -->
+  <section class="section-padding bg-cream">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Customer Favorites</span>
+        <h2 class="section-title">Bestselling Jewellery Pieces</h2>
+        <div class="section-divider"><i class="bi bi-star"></i></div>
+        <p class="section-desc">Our most-loved pieces cherished by brides and festive connoisseurs across the globe.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Bestseller 1: Royal Heritage Pearl Choker -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-bestseller">Best Seller</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="neck-01" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="neck-01" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=neck-01">
+                <img src="assets/images/products/necklace-royal-pearl-choker.jpg" alt="Royal Heritage Pearl Choker Necklace" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Necklaces</span>
+              <h5 class="product-title"><a href="product-details.html?id=neck-01">Royal Heritage Pearl Choker Necklace</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.9</span>
+                <span class="rating-count">(142)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹1,899</span>
+                <span class="price-original">₹2,799</span>
+                <span class="price-discount">32% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="neck-01">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bestseller 2: Hyderabad Lac Bangles -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-bestseller">Best Seller</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="bang-01" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="bang-01" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=bang-01">
+                <img src="assets/images/products/bangles-hyderabad-handmade-lac.jpg" alt="Handcrafted Hyderabad Lac Stone-Studded Bangles" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Bangles</span>
+              <h5 class="product-title"><a href="product-details.html?id=bang-01">Handcrafted Hyderabad Lac Stone Bangles (Set of 4)</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.9</span>
+                <span class="rating-count">(168)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹1,199</span>
+                <span class="price-original">₹1,799</span>
+                <span class="price-discount">33% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="bang-01">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bestseller 3: Royal Peacock Chandbali Jhumkas -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-bestseller">Best Seller</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="ear-01" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="ear-01" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=ear-01">
+                <img src="assets/images/products/earrings-colorful-jhumkas.jpg" alt="Royal Peacock Chandbali Jhumkas" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Earrings</span>
+              <h5 class="product-title"><a href="product-details.html?id=ear-01">Royal Peacock Chandbali Jhumkas</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.9</span>
+                <span class="rating-count">(184)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹1,199</span>
+                <span class="price-original">₹1,699</span>
+                <span class="price-discount">29% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="ear-01">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bestseller 4: Temple Motif Choker & Haar -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-bestseller">Best Seller</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="neck-02" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="neck-02" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=neck-02">
+                <img src="assets/images/products/necklace-temple-modern-designs.jpg" alt="South Indian Temple Motif Choker & Haar" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Necklaces</span>
+              <h5 class="product-title"><a href="product-details.html?id=neck-02">South Indian Temple Motif Choker &amp; Haar</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.8</span>
+                <span class="rating-count">(98)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹2,499</span>
+                <span class="price-original">₹3,599</span>
+                <span class="price-discount">30% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="neck-02">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="shop.html" class="btn btn-crimson btn-lg px-4">
+          <i class="bi bi-grid-3x3-gap"></i> View All Bestsellers
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED BANGLES SHOWCASE -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-8">
+          <span class="section-subtitle">Melodic Wrist Elegance</span>
+          <h2 class="section-title mb-0">Featured Bangle Stacks &amp; Kadas</h2>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+          <a href="shop.html?cat=Bangles" class="btn btn-outline-gold">
+            View All Bangles <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Bangle 1: Antique Gold Embossed Temple Kadas -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-trending">Trending</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="bang-03" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="bang-03" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=bang-03">
+                <img src="assets/images/products/bangles-pair-gold-embossed.jpg" alt="Antique Gold Embossed Temple Kadas" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Bangles</span>
+              <h5 class="product-title"><a href="product-details.html?id=bang-03">Antique Gold Embossed Temple Kadas (Pair)</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.9</span>
+                <span class="rating-count">(94)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹1,499</span>
+                <span class="price-original">₹2,199</span>
+                <span class="price-discount">32% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="bang-03">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bangle 2: Rainbow Festive Glass Bangles -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-bestseller">Festive Hit</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="bang-02" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="bang-02" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=bang-02">
+                <img src="assets/images/products/bangles-festive-glass-rainbow.jpg" alt="Rainbow Festive Glass & Velvet Bangle Stack" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Bangles</span>
+              <h5 class="product-title"><a href="product-details.html?id=bang-02">Rainbow Festive Glass &amp; Velvet Bangles (Set of 24)</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.8</span>
+                <span class="rating-count">(210)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹799</span>
+                <span class="price-original">₹1,199</span>
+                <span class="price-discount">33% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="bang-02">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bangle 3: Kashmiri Silver Charm Bangles -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-trending">Trending</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="bang-05" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="bang-05" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=bang-05">
+                <img src="assets/images/products/bangles-kashmiri-silver-charm.jpg" alt="Kashmiri Silver Charm Bangles with Ghungroo" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Bangles</span>
+              <h5 class="product-title"><a href="product-details.html?id=bang-05">Kashmiri Silver Charm Ghungroo Bangles (Set of 8)</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.6</span>
+                <span class="rating-count">(82)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹649</span>
+                <span class="price-original">₹949</span>
+                <span class="price-discount">32% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="bang-05">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bangle 4: Golden Kashmiri Rainbow Ghungroo Bangles -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-bestseller">Top Pick</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="bang-06" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="bang-06" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=bang-06">
+                <img src="assets/images/products/bangles-kashmiri-rainbow-ghungroo.jpg" alt="Golden Kashmiri Rainbow Ghungroo Bangles" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Bangles</span>
+              <h5 class="product-title"><a href="product-details.html?id=bang-06">Golden Kashmiri Rainbow Ghungroo Bangles (Set of 8)</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.8</span>
+                <span class="rating-count">(119)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹699</span>
+                <span class="price-original">₹999</span>
+                <span class="price-discount">30% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="bang-06">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FESTIVE PROMOTIONAL OFFERS (DUAL EQUAL CARDS) -->
+  <section class="container my-5">
+    <div class="row g-4 align-items-stretch">
+      <!-- Promo Card 1: Bridal Trousseau 25% OFF -->
+      <div class="col-lg-6 d-flex align-items-stretch">
+        <div class="festive-promo-card promo-bg-bridal h-100 w-100 shadow-sm">
+          <div>
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <span class="badge bg-gold text-dark fw-bold px-3 py-2 text-uppercase letter-spacing-1">Grand Wedding Bonanza</span>
+              <span class="text-gold fw-bold small"><i class="bi bi-stars"></i> Flat 25% OFF</span>
+            </div>
+            <h3 class="fw-bold text-white mb-2">Upgrade Your Bridal Trousseau</h3>
+            <p class="text-light small mb-4 opacity-90">
+              Complete 7-piece royal bridal sets with complimentary luxury keepsake velvet storage box and insured courier dispatch.
+            </p>
+          </div>
+          <div class="d-flex flex-wrap align-items-center gap-3 pt-3 border-top border-white-15">
+            <div class="coupon-box bg-white text-dark m-0 py-2 px-3 shadow-sm rounded">
+              <span class="small text-muted me-2">Use Coupon:</span>
+              <span class="coupon-code me-2">BRIDALROYAL25</span>
+              <button type="button" class="btn btn-sm btn-gold btn-copy-code" data-copy-coupon="BRIDALROYAL25">
+                <i class="bi bi-clipboard"></i> Copy
+              </button>
+            </div>
+            <a href="bridal-sets.html" class="btn btn-gold flex-grow-1 text-center">Shop Bridal Suites</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo Card 2: Festive Bangle Bonanza Buy 2 Get 1 FREE -->
+      <div class="col-lg-6 d-flex align-items-stretch">
+        <div class="festive-promo-card promo-bg-bangles h-100 w-100 shadow-sm">
+          <div>
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <span class="badge bg-gold text-dark fw-bold px-3 py-2 text-uppercase letter-spacing-1">Festive Bangle Bonanza</span>
+              <span class="text-gold fw-bold small"><i class="bi bi-gift-fill"></i> Buy 2 Get 1 FREE</span>
+            </div>
+            <h3 class="fw-bold text-white mb-2">Mix &amp; Match Handcrafted Bangles</h3>
+            <p class="text-light small mb-4 opacity-90">
+              Purchase any 2 handcrafted Lac, Glass, or Velvet Kada sets and receive a third matching festive pair complimentary.
+            </p>
+          </div>
+          <div class="d-flex flex-wrap align-items-center gap-3 pt-3 border-top border-white-15">
+            <div class="coupon-box bg-white text-dark m-0 py-2 px-3 shadow-sm rounded">
+              <span class="small text-muted me-2">Use Coupon:</span>
+              <span class="coupon-code me-2">BANGLEMAGIC</span>
+              <button type="button" class="btn btn-sm btn-gold btn-copy-code" data-copy-coupon="BANGLEMAGIC">
+                <i class="bi bi-clipboard"></i> Copy
+              </button>
+            </div>
+            <a href="shop.html?cat=Bangles" class="btn btn-gold flex-grow-1 text-center">Shop Bangle Stacks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR EARRINGS & JHUMKAS SECTION -->
+  <section class="section-padding bg-cream">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-8">
+          <span class="section-subtitle">Charming Accents</span>
+          <h2 class="section-title mb-0">Popular Earrings &amp; Jhumkas</h2>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+          <a href="shop.html?cat=Earrings" class="btn btn-outline-crimson">
+            View All Earrings <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Earring 1: Royal Peacock Jhumkas -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-bestseller">Best Seller</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="ear-01" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="ear-01" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=ear-01">
+                <img src="assets/images/products/earrings-colorful-jhumkas.jpg" alt="Handcrafted Royal Peacock Chandbali Jhumkas" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Earrings</span>
+              <h5 class="product-title"><a href="product-details.html?id=ear-01">Handcrafted Royal Peacock Chandbali Jhumkas</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.9</span>
+                <span class="rating-count">(184)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹1,199</span>
+                <span class="price-original">₹1,699</span>
+                <span class="price-discount">29% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="ear-01">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Earring 2: Austrian Crystal Pearl Drops -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-trending">Trending</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="ear-02" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="ear-02" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=ear-02">
+                <img src="assets/images/products/earrings-diamond-pearl-drop.jpg" alt="Classic Austrian Crystal Pearl Drop Earrings" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Earrings</span>
+              <h5 class="product-title"><a href="product-details.html?id=ear-02">Classic Austrian Crystal Pearl Drop Earrings</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.8</span>
+                <span class="rating-count">(132)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹799</span>
+                <span class="price-original">₹1,199</span>
+                <span class="price-discount">33% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="ear-02">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Earring 3: Korean Minimal Blossom Studs -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-new">New Arrival</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="ear-03" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="ear-03" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=ear-03">
+                <img src="assets/images/products/earrings-korean-stud-gem.jpg" alt="Korean Minimal Crystal Blossom Studs" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Earrings</span>
+              <h5 class="product-title"><a href="product-details.html?id=ear-03">Korean Minimal Crystal Blossom Studs</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.7</span>
+                <span class="rating-count">(95)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹449</span>
+                <span class="price-original">₹699</span>
+                <span class="price-discount">36% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="ear-03">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Earring 4: Artisa Atelier Sculpted Drops -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="product-card h-100">
+            <div class="product-media">
+              <span class="product-badge badge-bestseller">Artisan</span>
+              <div class="product-actions">
+                <button type="button" class="action-btn" data-wishlist-id="ear-04" title="Add to Wishlist" aria-label="Add to Wishlist">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button type="button" class="action-btn" data-quickview-id="ear-04" title="Quick View" aria-label="Quick View">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <a href="product-details.html?id=ear-04">
+                <img src="assets/images/products/artisa-001.jpg" alt="Artisa Atelier Sculpted Crystal Drop Earrings" class="product-img" loading="lazy">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Earrings</span>
+              <h5 class="product-title"><a href="product-details.html?id=ear-04">Artisa Atelier Sculpted Crystal Drop Earrings</a></h5>
+              <div class="product-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="fw-bold">4.8</span>
+                <span class="rating-count">(71)</span>
+              </div>
+              <div class="product-price-row">
+                <span class="price-current">₹899</span>
+                <span class="price-original">₹1,299</span>
+                <span class="price-discount">31% OFF</span>
+              </div>
+              <button type="button" class="btn btn-gold btn-add-cart" data-add-cart-id="ear-04">
+                <i class="bi bi-bag-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS & TESTIMONIALS -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Real Stories</span>
+        <h2 class="section-title">Loved by Over 50,000+ Customers</h2>
+        <div class="section-divider"><i class="bi bi-heart"></i></div>
+        <p class="section-desc">See why brides and jewellery lovers choose Mayuri Jewels for their weddings and family celebrations.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Testimonial 1 -->
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="testimonial-card w-100 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="assets/images/testimonials/customer-1.jpg" alt="Sunita Sharma" class="testimonial-avatar mb-0">
+              <div>
+                <h6 class="fw-bold mb-0">Sunita Sharma</h6>
+                <span class="small text-muted">Jaipur, Rajasthan</span>
+              </div>
+            </div>
+            <div class="text-gold mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-muted small fst-italic mb-0">
+              "The Kundan bridal suite looked indistinguishable from real heirloom gold at my wedding. The weight is balanced, and it did not tarnish even under hot stage lights!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="testimonial-card w-100 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="assets/images/testimonials/customer-2.jpg" alt="Aishwarya Iyer" class="testimonial-avatar mb-0">
+              <div>
+                <h6 class="fw-bold mb-0">Aishwarya Iyer</h6>
+                <span class="small text-muted">Chennai, Tamil Nadu</span>
+              </div>
+            </div>
+            <div class="text-gold mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-muted small fst-italic mb-0">
+              "The Temple Kasu Mala and matching peacock jhumkas exceeded my expectations. The matte gold finish is so royal, and shipping was completed in just 3 days."
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="testimonial-card w-100 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="assets/images/testimonials/customer-3.jpg" alt="Simran Kaur" class="testimonial-avatar mb-0">
+              <div>
+                <h6 class="fw-bold mb-0">Simran Kaur</h6>
+                <span class="small text-muted">Amritsar, Punjab</span>
+              </div>
+            </div>
+            <div class="text-gold mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-muted small fst-italic mb-0">
+              "Ordered the Hyderabad lac and glass bangle stack for Karwa Chauth. The tinkling sound, bright colors, and fit are absolutely top-notch!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="testimonial-card w-100 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="assets/images/testimonials/customer-4.jpg" alt="Ananya Banerjee" class="testimonial-avatar mb-0">
+              <div>
+                <h6 class="fw-bold mb-0">Ananya Banerjee</h6>
+                <span class="small text-muted">Kolkata, West Bengal</span>
+              </div>
+            </div>
+            <div class="text-gold mb-2">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-muted small fst-italic mb-0">
+              "I have very sensitive skin and was terrified of rashes. Mayuri's pieces are genuinely 100% hypoallergenic. I wore them through a 12-hour Sangeet with zero irritation!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER SIGNUP -->
+  <section class="py-5 bg-primary-soft border-top border-bottom border-gold">
+    <div class="container text-center">
+      <div class="max-w-600 mx-auto" style="max-width: 620px;">
+        <span class="section-subtitle">Exclusive Privileges</span>
+        <h3 class="fw-bold mb-2">Join the Mayuri Royal Circle</h3>
+        <p class="text-muted small mb-4">Subscribe to receive early access to festive collection drops, secret discount codes, and bridal styling tips. Get <strong>10% OFF</strong> your first order!</p>
+        <form class="newsletter-form d-flex flex-column flex-sm-row gap-2 justify-content-center">
+          <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required aria-label="Email Address">
+          <button type="submit" class="btn btn-crimson btn-lg px-4 flex-shrink-0">
+            <i class="bi bi-send-fill"></i> Subscribe Now
+          </button>
+        </form>
+        <span class="small text-muted mt-2 d-block">We respect your privacy. Unsubscribe at any time.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand mb-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="brand-icon-wrap">
+                <i class="bi bi-gem"></i>
+              </div>
+              <div>
+                <span class="brand-title">Mayuri</span>
+                <span class="brand-sub">Jewels &amp; Bangles</span>
+              </div>
+            </div>
+            <p class="text-muted small">
+              India's premier online destination for handcrafted imitation jewellery, festive bangles, temple haar, and imperial bridal sets. Celebrating heritage artistry with modern comfort.
+            </p>
+          </div>
+          <div class="social-links d-flex gap-2 mt-3">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index-2.html">Home 2 (Bridal)</a></li>
+            <li><a href="about.html">About Our Craft</a></li>
+            <li><a href="shop.html">Shop Catalogue</a></li>
+            <li><a href="bridal-sets.html">Bridal Sets</a></li>
+            <li><a href="offers.html">Festive Offers</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Categories -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-heading">Jewellery Categories</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?cat=Necklaces">Necklaces &amp; Chokers</a></li>
+            <li><a href="shop.html?cat=Bangles">Handcrafted Bangles</a></li>
+            <li><a href="shop.html?cat=Earrings">Jhumkas &amp; Chandbalis</a></li>
+            <li><a href="shop.html?cat=Bridal%20Sets">Bridal Jewellery Suites</a></li>
+            <li><a href="shop.html?cat=Traditional%20Jewellery">Temple Jewellery</a></li>
+            <li><a href="shop.html?cat=Party%20Wear%20Jewellery">Party &amp; Cocktail Wear</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Store Support & Address -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading">Store &amp; Support</h5>
+          <ul class="footer-links">
+            <li class="d-flex align-items-start gap-2 text-muted small mb-2">
+              <i class="bi bi-geo-alt text-gold mt-1"></i>
+              <span>48, Zaveri Bazaar Heritage Lane, Kalbadevi, Mumbai 400002, India</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 text-muted small mb-2">
+              <i class="bi bi-telephone text-gold"></i>
+              <span>+91 98400 12345 / 022 2345 6789</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 text-muted small mb-2">
+              <i class="bi bi-envelope text-gold"></i>
+              <span>care@mayurijewels.com</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 text-muted small">
+              <i class="bi bi-clock text-gold"></i>
+              <span>Mon - Sat: 10:30 AM - 8:30 PM IST</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="small mb-0">&copy; 2026 Mayuri Jewels &amp; Bangles. All Rights Reserved.</p>
+        <div class="footer-legal-links d-flex align-items-center gap-4 small">
+          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms-of-care.html" class="footer-legal-link">Terms of Care</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS & OFFCANVAS (SHARED ACROSS PAGES)
+       ========================================================================== -->
+
+  <!-- Shopping Cart Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel">
+        <i class="bi bi-bag-check text-gold"></i> Your Shopping Cart
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <!-- Free Shipping Progress -->
+      <div class="cart-shipping-progress">
+        <div id="freeShippingText" class="mb-1">Add items worth ₹1,499 for FREE Delivery!</div>
+        <div class="progress">
+          <div id="freeShippingProgress" class="progress-bar progress-bar-gold" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <!-- Items List -->
+      <div id="cartItemsContainer" class="flex-grow-1 overflow-auto">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+
+      <!-- Cart Footer Summary -->
+      <div id="cartFooter" class="pt-3 border-top border-subtle mt-auto" style="display: none;">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="text-muted">Subtotal:</span>
+          <span class="fw-bold" id="cartSubtotal">₹0</span>
+        </div>
+        <div class="d-flex justify-content-between mb-3">
+          <span class="fw-bold fs-5">Estimated Total:</span>
+          <span class="fw-bold fs-5 text-crimson" id="cartTotal">₹0</span>
+        </div>
+        <div class="d-grid gap-2">
+          <a href="checkout.html" class="btn btn-gold btn-lg btn-proceed-checkout" id="btnCheckout">
+            <i class="bi bi-lock-fill"></i> Proceed to Checkout
+          </a>
+          <a href="shop.html" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="offcanvas">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Modal -->
+  <div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-card border-gold">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="wishlistModalLabel">
+            <i class="bi bi-heart-fill text-crimson me-2"></i> Your Saved Wishlist
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div id="wishlistModalItems">
+            <p class="text-muted text-center py-4">Explore our catalogue and click the heart icon on any necklace, bangle, or earring to save your favorites!</p>
+            <div class="text-center">
+              <a href="shop.html" class="btn btn-gold btn-sm" data-bs-dismiss="modal">Browse Jewellery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-card border-gold">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 pt-0">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6">
+              <div class="product-gallery-main">
+                <img id="quickViewImg" src="" alt="Jewellery item preview" class="img-fluid">
+              </div>
+              <div class="gallery-thumbs-row" id="quickViewThumbs"></div>
+            </div>
+            <div class="col-md-6">
+              <span class="product-category" id="quickViewCategory">Category</span>
+              <h4 class="fw-bold mb-2" id="quickViewTitle">Product Title</h4>
+              <div class="product-rating mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <span class="rating-count ms-2">(Verified Quality)</span>
+              </div>
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span class="fs-3 fw-bold text-crimson" id="quickViewPrice">₹0</span>
+                <span class="text-muted text-decoration-line-through small" id="quickViewOldPrice">₹0</span>
+                <span class="badge bg-success small" id="quickViewDiscount"></span>
+              </div>
+              <p class="text-muted small mb-3" id="quickViewDesc"></p>
+
+              <div id="quickViewSizes" class="mb-3"></div>
+
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="qty-stepper" style="height: 38px;">
+                  <button type="button" class="qty-btn" onclick="let el=document.getElementById('quickViewQty'); if(el.value>1) el.value=parseInt(el.value)-1;">-</button>
+                  <input type="text" id="quickViewQty" class="qty-input" value="1" style="width: 40px;" readonly>
+                  <button type="button" class="qty-btn" onclick="let el=document.getElementById('quickViewQty'); el.value=parseInt(el.value)+1;">+</button>
+                </div>
+                <button type="button" class="btn btn-gold flex-grow-1" id="quickViewAddBtn">
+                  <i class="bi bi-bag-plus"></i> Add to Cart
+                </button>
+              </div>
+
+              <div id="quickViewSpecs"></div>
+              
+              <div class="mt-3 text-end">
+                <a href="#" id="quickViewDetailsLink" class="text-crimson fw-bold small">
+                  View Full Product Details &amp; Specifications <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demo Checkout Notice Modal -->
+  <div class="modal fade" id="checkoutDemoModal" tabindex="-1" aria-labelledby="checkoutDemoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-card border-gold">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="checkoutDemoModalLabel">
+            <i class="bi bi-info-circle-fill text-gold me-2"></i> Frontend Demonstration Template
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <div class="mb-3 text-gold">
+            <i class="bi bi-gem fs-1"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Checkout Simulation</h5>
+          <p class="text-muted small">
+            This is a frontend HTML, CSS &amp; JavaScript template suitable for ThemeForest, TemplateMonster, or custom e-commerce deployment. No real backend or payment processing is connected.
+          </p>
+          <div class="p-3 bg-cream rounded text-start small mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Frontend Cart Items:</span>
+              <strong class="cart-count-badge d-inline-block p-0 bg-transparent text-dark">Active</strong>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Payment Gateway:</span>
+              <span class="text-muted">Simulated (Stripe / Razorpay Ready)</span>
+            </div>
+          </div>
+          <button type="button" class="btn btn-gold w-100" data-bs-dismiss="modal">Got it, Continue Browsing</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-card border-gold">
+        <div class="modal-header border-bottom border-subtle">
+          <h5 class="modal-title fw-bold" id="privacyPolicyModalLabel">
+            <i class="bi bi-shield-lock-fill text-gold me-2"></i> Privacy Policy
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 small">
+          <h6 class="fw-bold mb-2">1. Information Collection</h6>
+          <p class="text-muted mb-3">We collect customer names, shipping addresses, phone numbers, and email IDs solely to fulfill jewellery orders, provide dispatch tracking, and send requested styling consultations.</p>
+
+          <h6 class="fw-bold mb-2">2. Payment Security</h6>
+          <p class="text-muted mb-3">We do not store your debit/credit card numbers or UPI PINs. All financial transactions are processed securely through certified, encrypted 256-bit payment gateways.</p>
+
+          <h6 class="fw-bold mb-2">3. Zero Third-Party Sharing</h6>
+          <p class="text-muted mb-3">Your personal contact information is never sold, leased, or distributed to any third-party marketing agencies.</p>
+
+          <h6 class="fw-bold mb-2">4. Cookies &amp; Preferences</h6>
+          <p class="text-muted mb-0">We use local browser storage strictly to preserve your cart items, saved wishlist, and theme preferences across visits.</p>
+        </div>
+        <div class="modal-footer border-top border-subtle">
+          <button type="button" class="btn btn-gold btn-sm" data-bs-dismiss="modal">I Understand</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms of Care Modal -->
+  <div class="modal fade" id="termsOfCareModal" tabindex="-1" aria-labelledby="termsOfCareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-card border-gold">
+        <div class="modal-header border-bottom border-subtle">
+          <h5 class="modal-title fw-bold" id="termsOfCareModalLabel">
+            <i class="bi bi-gem text-gold me-2"></i> Terms of Care &amp; Service
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 small">
+          <h6 class="fw-bold mb-2">1. Jewellery Care Instructions</h6>
+          <p class="text-muted mb-3">Keep all imitation, Kundan, and lac jewellery away from direct contact with perfumes, sanitizers, hairsprays, and water. Wipe gently with a dry, soft cotton cloth after every wear before storing.</p>
+
+          <h6 class="fw-bold mb-2">2. Storage Recommendation</h6>
+          <p class="text-muted mb-3">Always store ornaments in airtight ziplock pouches or inside the complimentary Mayuri velvet box. Avoid velvet foam cases that retain atmospheric moisture.</p>
+
+          <h6 class="fw-bold mb-2">3. 7-Day Replacement Guarantee</h6>
+          <p class="text-muted mb-3">In the unlikely event of damage during transit, record an unboxing video and report it to our customer care within 7 days of delivery for immediate, hassle-free replacement.</p>
+
+          <h6 class="fw-bold mb-2">4. Plating &amp; Color Longevity</h6>
+          <p class="text-muted mb-0">Our 24K and antique micron plating is engineered for long-lasting festive wear. Natural oxidation depends on skin chemistry and humidity; proper care ensures years of radiant shine.</p>
+        </div>
+        <div class="modal-footer border-top border-subtle">
+          <button type="button" class="btn btn-gold btn-sm" data-bs-dismiss="modal">Close &amp; Continue Shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="jewel-toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
