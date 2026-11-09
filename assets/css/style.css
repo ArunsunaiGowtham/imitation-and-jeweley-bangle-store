@@ -608,6 +608,229 @@ img {
   color: var(--gold-primary);
 }
 
+/* --- 5b. MOBILE & TABLET NAVBAR RESPONSIVE STYLES --- */
+@media (max-width: 991.98px) {
+  .navbar-jewel {
+    padding: 0.5rem 0 !important;
+  }
+
+  .navbar-jewel.is-sticky {
+    padding: 0.45rem 0 !important;
+  }
+
+  /* Keep top bar strictly on a single horizontal row */
+  .navbar-jewel > .container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .navbar-jewel .navbar-brand {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .navbar-jewel .brand-icon-wrap {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.15rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .navbar-jewel .brand-title {
+    font-size: 1.18rem !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+  }
+
+  .navbar-jewel .brand-sub {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.08em !important;
+    margin-top: 1px !important;
+    line-height: 1 !important;
+  }
+
+  /* Mobile Actions Container - keep strictly on same row as brand */
+  .navbar-jewel .d-lg-none.d-flex {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    flex-shrink: 0 !important;
+    gap: 5px !important;
+    margin: 0 !important;
+  }
+
+  .navbar-jewel .d-lg-none .control-btn {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 0.88rem !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+  }
+
+  .navbar-jewel .d-lg-none .control-btn .dir-text {
+    font-size: 0.65rem !important;
+  }
+
+  .navbar-jewel .d-lg-none .navbar-toggler {
+    width: 34px !important;
+    height: 34px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    background: transparent !important;
+  }
+
+  .navbar-jewel .d-lg-none .navbar-toggler i {
+    font-size: 1.5rem !important;
+    line-height: 1 !important;
+  }
+
+  .navbar-jewel .d-lg-none .control-badge {
+    width: 17px !important;
+    height: 17px !important;
+    font-size: 0.62rem !important;
+    top: -3px !important;
+    right: -3px !important;
+  }
+
+  /* Collapsible Navigation Menu */
+  .navbar-jewel .navbar-collapse {
+    flex-basis: 100% !important;
+    width: 100% !important;
+    margin-top: 0.6rem !important;
+    padding-top: 0.75rem !important;
+    border-top: 1px solid var(--border-gold) !important;
+  }
+
+  .navbar-jewel .navbar-collapse .navbar-nav {
+    padding: 0.25rem 0 !important;
+  }
+
+  .navbar-jewel .navbar-collapse .nav-link {
+    padding: 0.6rem 0.75rem !important;
+    font-size: 0.95rem !important;
+    border-radius: var(--radius-sm) !important;
+  }
+
+  .navbar-jewel .navbar-collapse .nav-link.active::before {
+    display: none !important;
+  }
+
+  .navbar-jewel .navbar-collapse .nav-link.active {
+    background-color: var(--gold-light) !important;
+    color: var(--gold-dark) !important;
+  }
+
+  .navbar-jewel .navbar-collapse .dropdown-menu {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: var(--bg-secondary) !important;
+    padding: 0.25rem 0.5rem !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.5rem !important;
+    border-radius: var(--radius-sm) !important;
+  }
+
+  [data-bs-theme="dark"] .navbar-jewel .navbar-collapse {
+    border-top-color: rgba(201, 147, 38, 0.35) !important;
+  }
+
+  [data-bs-theme="dark"] .navbar-jewel .navbar-collapse .nav-link.active {
+    background-color: rgba(201, 147, 38, 0.2) !important;
+    color: var(--gold-primary) !important;
+  }
+
+  [data-bs-theme="dark"] .navbar-jewel .navbar-collapse .dropdown-menu {
+    background-color: #1e141c !important;
+  }
+}
+
+/* Specific optimizations for compact phone screens (<= 420px) */
+@media (max-width: 420px) {
+  .navbar-jewel > .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .navbar-jewel .navbar-brand {
+    gap: 6px !important;
+  }
+
+  .navbar-jewel .brand-icon-wrap {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1rem !important;
+  }
+
+  .navbar-jewel .brand-title {
+    font-size: 1.05rem !important;
+  }
+
+  .navbar-jewel .brand-sub {
+    font-size: 0.52rem !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .navbar-jewel .d-lg-none.d-flex {
+    gap: 4px !important;
+  }
+
+  .navbar-jewel .d-lg-none .control-btn {
+    width: 31px !important;
+    height: 31px !important;
+    font-size: 0.82rem !important;
+  }
+
+  .navbar-jewel .d-lg-none .control-btn .dir-text {
+    font-size: 0.6rem !important;
+  }
+
+  .navbar-jewel .d-lg-none .navbar-toggler {
+    width: 31px !important;
+    height: 31px !important;
+  }
+
+  .navbar-jewel .d-lg-none .navbar-toggler i {
+    font-size: 1.35rem !important;
+  }
+}
+
+/* Ultra-narrow phone screens (<= 350px) */
+@media (max-width: 350px) {
+  .navbar-jewel > .container {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+
+  .navbar-jewel .brand-sub {
+    display: none !important;
+  }
+
+  .navbar-jewel .d-lg-none.d-flex {
+    gap: 3px !important;
+  }
+
+  .navbar-jewel .d-lg-none .control-btn {
+    width: 29px !important;
+    height: 29px !important;
+    font-size: 0.76rem !important;
+  }
+
+  .navbar-jewel .d-lg-none .navbar-toggler {
+    width: 29px !important;
+    height: 29px !important;
+  }
+}
+
 /* --- 6. HERO SECTIONS --- */
 /* Home 1 Hero - Classic Heritage */
 .hero-home1 {
