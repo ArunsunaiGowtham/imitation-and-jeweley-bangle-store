@@ -1578,34 +1578,50 @@
      20b. NAVBAR DROPDOWN ENHANCEMENT
      ========================================================================== */
   function initNavbarDropdowns() {
+    // Disable Popper on all Bootstrap dropdown instances
+    if (typeof bootstrap !== "undefined" && bootstrap.Dropdown) {
+      document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach((toggle) => {
+        try {
+          bootstrap.Dropdown.getOrCreateInstance(toggle, {
+            display: "static",
+            autoClose: true
+          });
+        } catch (_) {}
+      });
+    }
+
     document.querySelectorAll(".navbar-nav .nav-item.dropdown").forEach((dropdown) => {
       const toggle = dropdown.querySelector(".dropdown-toggle");
       const menu = dropdown.querySelector(".dropdown-menu");
       if (!toggle || !menu) return;
 
       toggle.setAttribute("role", "button");
+      toggle.setAttribute("data-bs-display", "static");
 
-      // On mobile (< 992px), if on home page or active item, pre-expand so options are clearly visible
-      if (window.innerWidth < 992) {
-        const hasActive = menu.querySelector(".dropdown-item.active") || toggle.classList.contains("active");
-        if (hasActive) {
-          menu.classList.add("show");
-          toggle.classList.add("show");
-          dropdown.classList.add("show");
-          toggle.setAttribute("aria-expanded", "true");
+      // Strip any inline styles Popper might try to set on mobile
+      function cleanMenuStyles() {
+        if (window.innerWidth < 992) {
+          menu.removeAttribute("style");
         }
       }
+      cleanMenuStyles();
+      window.addEventListener("resize", cleanMenuStyles, { passive: true });
 
-      // Robust click & touch toggle without bootstrap collision
+      // Robust click & touch toggle without bootstrap/popper collision
       toggle.addEventListener("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
+
+        cleanMenuStyles();
 
         const isOpen = menu.classList.contains("show");
 
         // Close all other open dropdowns
         document.querySelectorAll(".navbar-nav .dropdown-menu.show").forEach((m) => {
-          if (m !== menu) m.classList.remove("show");
+          if (m !== menu) {
+            m.classList.remove("show");
+            if (window.innerWidth < 992) m.removeAttribute("style");
+          }
         });
         document.querySelectorAll(".navbar-nav .dropdown-toggle.show").forEach((t) => {
           if (t !== toggle) {
@@ -1623,11 +1639,13 @@
           toggle.classList.remove("show");
           dropdown.classList.remove("show");
           toggle.setAttribute("aria-expanded", "false");
+          cleanMenuStyles();
         } else {
           menu.classList.add("show");
           toggle.classList.add("show");
           dropdown.classList.add("show");
           toggle.setAttribute("aria-expanded", "true");
+          cleanMenuStyles();
         }
       });
     });
@@ -1637,6 +1655,7 @@
       if (!e.target.closest(".navbar-nav .nav-item.dropdown")) {
         document.querySelectorAll(".navbar-nav .dropdown-menu.show").forEach((m) => {
           m.classList.remove("show");
+          if (window.innerWidth < 992) m.removeAttribute("style");
         });
         document.querySelectorAll(".navbar-nav .dropdown-toggle.show").forEach((t) => {
           t.classList.remove("show");
@@ -1647,6 +1666,29 @@
         });
       }
     });
+
+    // Clean up when mobile collapse toggles
+    const navCollapse = document.getElementById("navbarContent");
+    if (navCollapse) {
+      navCollapse.addEventListener("shown.bs.collapse", () => {
+        document.querySelectorAll(".navbar-jewel .dropdown-menu").forEach((m) => {
+          m.removeAttribute("style");
+        });
+      });
+      navCollapse.addEventListener("hidden.bs.collapse", () => {
+        document.querySelectorAll(".navbar-nav .dropdown-menu.show").forEach((m) => {
+          m.classList.remove("show");
+          m.removeAttribute("style");
+        });
+        document.querySelectorAll(".navbar-nav .dropdown-toggle.show").forEach((t) => {
+          t.classList.remove("show");
+          t.setAttribute("aria-expanded", "false");
+        });
+        document.querySelectorAll(".navbar-nav .nav-item.dropdown.show").forEach((d) => {
+          d.classList.remove("show");
+        });
+      });
+    }
   }
 
   /* ==========================================================================
