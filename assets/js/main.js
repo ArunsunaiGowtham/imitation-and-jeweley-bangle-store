@@ -1578,29 +1578,56 @@
      20b. NAVBAR DROPDOWN ENHANCEMENT
      ========================================================================== */
   function initNavbarDropdowns() {
-    // If Bootstrap is loaded, initialize dropdown instances
-    if (typeof bootstrap !== "undefined" && bootstrap.Dropdown) {
-      document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach((toggle) => {
-        bootstrap.Dropdown.getOrCreateInstance(toggle);
-      });
-    }
-
-    // Reliable fallback for mobile click and tap toggling
     document.querySelectorAll(".navbar-nav .nav-item.dropdown").forEach((dropdown) => {
       const toggle = dropdown.querySelector(".dropdown-toggle");
       const menu = dropdown.querySelector(".dropdown-menu");
       if (!toggle || !menu) return;
 
-      toggle.addEventListener("click", (e) => {
-        if (window.innerWidth < 992) {
-          e.preventDefault();
-          const willOpen = !menu.classList.contains("show");
-          document.querySelectorAll(".navbar-nav .dropdown-menu.show").forEach((m) => {
-            if (m !== menu) m.classList.remove("show");
-          });
-          menu.classList.toggle("show", willOpen);
-          toggle.classList.toggle("show", willOpen);
-          toggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      toggle.setAttribute("role", "button");
+
+      // On mobile (< 992px), if on home page or active item, pre-expand so options are clearly visible
+      if (window.innerWidth < 992) {
+        const hasActive = menu.querySelector(".dropdown-item.active") || toggle.classList.contains("active");
+        if (hasActive) {
+          menu.classList.add("show");
+          toggle.classList.add("show");
+          dropdown.classList.add("show");
+          toggle.setAttribute("aria-expanded", "true");
+        }
+      }
+
+      // Robust click & touch toggle without bootstrap collision
+      toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isOpen = menu.classList.contains("show");
+
+        // Close all other open dropdowns
+        document.querySelectorAll(".navbar-nav .dropdown-menu.show").forEach((m) => {
+          if (m !== menu) m.classList.remove("show");
+        });
+        document.querySelectorAll(".navbar-nav .dropdown-toggle.show").forEach((t) => {
+          if (t !== toggle) {
+            t.classList.remove("show");
+            t.setAttribute("aria-expanded", "false");
+          }
+        });
+        document.querySelectorAll(".navbar-nav .nav-item.dropdown.show").forEach((d) => {
+          if (d !== dropdown) d.classList.remove("show");
+        });
+
+        // Toggle state
+        if (isOpen) {
+          menu.classList.remove("show");
+          toggle.classList.remove("show");
+          dropdown.classList.remove("show");
+          toggle.setAttribute("aria-expanded", "false");
+        } else {
+          menu.classList.add("show");
+          toggle.classList.add("show");
+          dropdown.classList.add("show");
+          toggle.setAttribute("aria-expanded", "true");
         }
       });
     });
@@ -1614,6 +1641,9 @@
         document.querySelectorAll(".navbar-nav .dropdown-toggle.show").forEach((t) => {
           t.classList.remove("show");
           t.setAttribute("aria-expanded", "false");
+        });
+        document.querySelectorAll(".navbar-nav .nav-item.dropdown.show").forEach((d) => {
+          d.classList.remove("show");
         });
       }
     });
