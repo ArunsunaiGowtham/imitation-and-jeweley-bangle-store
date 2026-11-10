@@ -554,15 +554,69 @@
     let activeSort = "featured";
     let searchQuery = "";
 
-    // Parse URL param ?cat=...
+    const searchInput = document.getElementById("shopSearchInput");
+    const searchBtn = document.getElementById("shopSearchBtn");
+
+    // Parse URL params (?cat=... & ?search=... or ?q=...)
     const urlParams = new URLSearchParams(window.location.search);
     const catParam = urlParams.get("cat");
-    if (catParam) {
+    const searchParam = urlParams.get("search") || urlParams.get("q");
+
+    if (searchParam) {
+      searchQuery = decodeURIComponent(searchParam).trim();
+      if (searchInput) searchInput.value = searchQuery;
+    }
+    if (catParam && !searchParam) {
       activeCategory = decodeURIComponent(catParam);
+    }
+
+    // Comprehensive search query matcher
+    function matchesSearch(product, query) {
+      if (!query) return true;
+      const clean = query.toLowerCase().trim();
+      if (!clean) return true;
+      const singular = clean.endsWith("s") && clean.length > 3 ? clean.slice(0, -1) : clean;
+
+      const searchableText = [
+        product.name || "",
+        product.category || "",
+        product.subCategory || "",
+        product.shortDesc || "",
+        product.badge || "",
+        Object.values(product.specs || {}).join(" "),
+        (product.colors || []).join(" ")
+      ]
+        .join(" ")
+        .toLowerCase();
+
+      return searchableText.includes(clean) || searchableText.includes(singular);
     }
 
     function renderProducts() {
       let filtered = [...window.JEWELRY_PRODUCTS];
+
+      // Auto-fallback: If search query is present, check whether activeCategory restricts it to 0 results
+      // while matching products exist across the entire catalogue.
+      if (searchQuery.trim().length > 0 && activeCategory !== "All") {
+        const categoryMatches = filtered.filter((p) => {
+          const matchCat =
+            p.category.toLowerCase() === activeCategory.toLowerCase() ||
+            (p.subCategory && p.subCategory.toLowerCase() === activeCategory.toLowerCase());
+          return matchCat && matchesSearch(p, searchQuery);
+        });
+
+        // If no matches inside the selected category, but matches exist globally,
+        // automatically switch activeCategory to All so the user finds what they searched for
+        if (categoryMatches.length === 0) {
+          const globalMatches = window.JEWELRY_PRODUCTS.filter((p) => matchesSearch(p, searchQuery));
+          if (globalMatches.length > 0) {
+            activeCategory = "All";
+            document.querySelectorAll("[data-filter-category]").forEach((b) => {
+              b.classList.toggle("active", b.getAttribute("data-filter-category") === "All");
+            });
+          }
+        }
+      }
 
       // Category filter
       if (activeCategory !== "All") {
@@ -584,15 +638,9 @@
         filtered = filtered.filter((p) => p.price > 4000);
       }
 
-      // Search query
+      // Search query filter
       if (searchQuery.trim().length > 0) {
-        const query = searchQuery.toLowerCase().trim();
-        filtered = filtered.filter(
-          (p) =>
-            p.name.toLowerCase().includes(query) ||
-            p.category.toLowerCase().includes(query) ||
-            p.shortDesc.toLowerCase().includes(query)
-        );
+        filtered = filtered.filter((p) => matchesSearch(p, searchQuery));
       }
 
       // Sorting
@@ -609,7 +657,7 @@
       // Update Result Count
       const resultCountEl = document.getElementById("shopResultCount");
       if (resultCountEl) {
-        resultCountEl.textContent = `Showing ${filtered.length} products`;
+        resultCountEl.textContent = `Showing ${filtered.length} product${filtered.length === 1 ? "" : "s"}`;
       }
 
       // Active Filter Pills
@@ -617,13 +665,13 @@
       if (activeFilterPills) {
         let pillsHtml = "";
         if (activeCategory !== "All") {
-          pillsHtml += `<span class="badge bg-gold text-dark me-2 py-2 px-3">${activeCategory} <i class="bi bi-x-circle ms-1 cursor-pointer" id="clearCatPill"></i></span>`;
+          pillsHtml += `<span class="badge bg-gold text-dark me-2 py-2 px-3">${activeCategory} <i class="bi bi-x-circle ms-1 cursor-pointer" id="clearCatPill" title="Clear category filter"></i></span>`;
         }
         if (activePriceRange !== "all") {
-          pillsHtml += `<span class="badge bg-secondary text-white me-2 py-2 px-3">Price Filter <i class="bi bi-x-circle ms-1 cursor-pointer" id="clearPricePill"></i></span>`;
+          pillsHtml += `<span class="badge bg-secondary text-white me-2 py-2 px-3">Price Filter <i class="bi bi-x-circle ms-1 cursor-pointer" id="clearPricePill" title="Clear price filter"></i></span>`;
         }
         if (searchQuery) {
-          pillsHtml += `<span class="badge bg-crimson text-white me-2 py-2 px-3">"${searchQuery}" <i class="bi bi-x-circle ms-1 cursor-pointer" id="clearSearchPill"></i></span>`;
+          pillsHtml += `<span class="badge bg-crimson text-white me-2 py-2 px-3">"${searchQuery}" <i class="bi bi-x-circle ms-1 cursor-pointer" id="clearSearchPill" title="Clear search query"></i></span>`;
         }
         activeFilterPills.innerHTML = pillsHtml;
       }
@@ -634,8 +682,19 @@
           <div class="col-12 py-5 text-center">
             <div class="mb-3 text-muted"><i class="bi bi-search fs-1"></i></div>
             <h4 class="fw-bold">No Matching Jewellery Products Found</h4>
-            <p class="text-muted">Try clearing your filters or searching for terms like "Choker", "Bangles", "Jhumkas", or "Bridal".</p>
-            <button type="button" class="btn btn-gold btn-sm" id="resetAllFiltersBtn">Reset All Filters</button>
+            <p class="text-muted">No products found matching <strong>"${searchQuery}"</strong>${activeCategory !== "All" ? ` under <em>${activeCategory}</em>` : ""}.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+              <button type="button" class="btn btn-gold btn-sm" id="resetAllFiltersBtn"><i class="bi bi-arrow-counterclockwise me-1"></i> Reset All Filters</button>
+              ${searchQuery ? `<button type="button" class="btn btn-outline-crimson btn-sm" id="clearSearchBtn"><i class="bi bi-x-circle me-1"></i> Clear Search</button>` : ""}
+            </div>
+            <div class="mt-4 pt-3 border-top border-subtle">
+              <span class="small text-muted me-2">Popular searches:</span>
+              <button type="button" class="badge bg-cream text-dark border me-1 py-2 px-3 quick-search-tag" data-search-term="Bangles">Bangles</button>
+              <button type="button" class="badge bg-cream text-dark border me-1 py-2 px-3 quick-search-tag" data-search-term="Choker">Choker</button>
+              <button type="button" class="badge bg-cream text-dark border me-1 py-2 px-3 quick-search-tag" data-search-term="Jhumkas">Jhumkas</button>
+              <button type="button" class="badge bg-cream text-dark border me-1 py-2 px-3 quick-search-tag" data-search-term="Bridal">Bridal</button>
+              <button type="button" class="badge bg-cream text-dark border py-2 px-3 quick-search-tag" data-search-term="Kundan">Kundan</button>
+            </div>
           </div>
         `;
         return;
@@ -643,6 +702,41 @@
 
       productsGrid.innerHTML = filtered.map((p) => createProductCardHtml(p, "col-md-6 col-lg-4 mb-4")).join("");
       updateWishlistButtons();
+    }
+
+    // Function to execute user search
+    function handleSearchInput(query) {
+      searchQuery = query;
+      // When a user initiates a search query, reset activeCategory to "All"
+      // so the search runs across all categories rather than being restricted
+      // to whatever category was clicked earlier
+      if (searchQuery.trim().length > 0 && activeCategory !== "All") {
+        activeCategory = "All";
+        document.querySelectorAll("[data-filter-category]").forEach((b) => {
+          b.classList.toggle("active", b.getAttribute("data-filter-category") === "All");
+        });
+      }
+      renderProducts();
+    }
+
+    // Bind Search Input
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        handleSearchInput(e.target.value);
+      });
+      searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          handleSearchInput(searchInput.value);
+        }
+      });
+    }
+
+    // Bind Search Button
+    if (searchBtn) {
+      searchBtn.addEventListener("click", () => {
+        if (searchInput) handleSearchInput(searchInput.value);
+      });
     }
 
     // Bind Category Buttons
@@ -663,15 +757,6 @@
       });
     });
 
-    // Bind Search Input
-    const searchInput = document.getElementById("shopSearchInput");
-    if (searchInput) {
-      searchInput.addEventListener("input", (e) => {
-        searchQuery = e.target.value;
-        renderProducts();
-      });
-    }
-
     // Bind Sort Select
     const sortSelect = document.getElementById("shopSortSelect");
     if (sortSelect) {
@@ -681,7 +766,7 @@
       });
     }
 
-    // Reset filters trigger
+    // Delegated click handlers for filters & pills
     document.addEventListener("click", (e) => {
       if (e.target.id === "resetAllFiltersBtn" || e.target.id === "clearAllFiltersLink") {
         activeCategory = "All";
@@ -709,10 +794,19 @@
         if (allRadio) allRadio.checked = true;
         renderProducts();
       }
-      if (e.target.id === "clearSearchPill") {
+      if (e.target.id === "clearSearchPill" || e.target.id === "clearSearchBtn") {
         searchQuery = "";
         if (searchInput) searchInput.value = "";
         renderProducts();
+      }
+      // Quick search tags inside empty state
+      const quickTag = e.target.closest(".quick-search-tag");
+      if (quickTag) {
+        const term = quickTag.getAttribute("data-search-term");
+        if (term) {
+          if (searchInput) searchInput.value = term;
+          handleSearchInput(term);
+        }
       }
     });
 
