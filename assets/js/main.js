@@ -1784,6 +1784,12 @@
 
       // Mobile & Desktop Click Handler
       toggle.addEventListener("click", function (e) {
+        // If on desktop (> 992px) and menu is already visible/open, clicking Home navigates directly to Home page
+        if (window.innerWidth >= 992 && (menu.classList.contains("show") || dropdown.matches(":hover"))) {
+          window.location.href = "index.html";
+          return;
+        }
+
         e.preventDefault();
         e.stopPropagation();
 

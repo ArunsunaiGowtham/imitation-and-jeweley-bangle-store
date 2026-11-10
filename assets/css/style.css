@@ -616,11 +616,40 @@ img {
     margin-top: 0.25rem;
   }
 
+  /* Invisible hover bridge so mouse cursor never loses hover across margin gap */
+  .navbar-nav .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+  }
+
   .navbar-nav .dropdown-menu.show {
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateY(0) !important;
     pointer-events: auto !important;
+  }
+}
+
+/* Tablet & 1024px Screen Optimizations for Navigation Bar (Strict single line, no text-wrap) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-nav .nav-link {
+    font-size: 0.86rem !important;
+    padding: 0.5rem 0.52rem !important;
+    white-space: nowrap !important;
+  }
+  .navbar-jewel .navbar-brand {
+    gap: 6px !important;
+  }
+  .navbar-jewel .brand-title {
+    font-size: 1.25rem !important;
+  }
+  .navbar-jewel .control-btn {
+    width: 36px !important;
+    height: 36px !important;
   }
 }
 
