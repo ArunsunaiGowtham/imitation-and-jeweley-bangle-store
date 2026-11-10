@@ -345,6 +345,7 @@
     } catch (e) {}
     updateWishlistBadges();
     updateWishlistButtons();
+    renderWishlistModal();
   }
 
   function updateWishlistBadges() {
@@ -370,6 +371,100 @@
     });
   }
 
+  function renderWishlistModal() {
+    const modal = document.getElementById("wishlistModal");
+    if (!modal) return;
+    const container =
+      document.getElementById("wishlistModalItems") ||
+      document.getElementById("wishlistItemsContainer") ||
+      modal.querySelector(".modal-body");
+    if (!container) return;
+
+    if (!wishlist || wishlist.length === 0) {
+      container.innerHTML = `
+        <div class="text-center py-5">
+          <div class="mb-3 text-muted">
+            <i class="bi bi-heart" style="font-size: 3.5rem; opacity: 0.4;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Your Wishlist is Empty</h5>
+          <p class="text-muted small mb-4">Explore our catalogue and click the heart icon on any necklace, bangle, or earring to save your favorites!</p>
+          <a href="shop.html" class="btn btn-gold btn-sm" data-bs-dismiss="modal">Browse Jewellery</a>
+        </div>
+      `;
+      return;
+    }
+
+    const items = wishlist
+      .map((id) => (window.JEWELRY_PRODUCTS ? window.JEWELRY_PRODUCTS.find((p) => p.id === id) : null))
+      .filter(Boolean);
+
+    if (items.length === 0) {
+      container.innerHTML = `
+        <div class="text-center py-5">
+          <div class="mb-3 text-muted">
+            <i class="bi bi-heart" style="font-size: 3.5rem; opacity: 0.4;"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Your Wishlist is Empty</h5>
+          <p class="text-muted small mb-4">Explore our catalogue and click the heart icon on any necklace, bangle, or earring to save your favorites!</p>
+          <a href="shop.html" class="btn btn-gold btn-sm" data-bs-dismiss="modal">Browse Jewellery</a>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = `
+      <div class="wishlist-list-wrapper">
+        <div class="d-flex justify-content-between align-items-center pb-2 mb-3 border-bottom border-subtle">
+          <span class="text-muted small"><strong class="text-gold">${items.length}</strong> ${items.length === 1 ? "item" : "items"} saved</span>
+          <button type="button" class="btn btn-link btn-sm text-danger p-0 text-decoration-none" onclick="MayuriStore.clearWishlist()">
+            <i class="bi bi-trash me-1"></i> Clear Wishlist
+          </button>
+        </div>
+        <div class="wishlist-items-scroll" style="max-height: 420px; overflow-y: auto;">
+          ${items.map((p) => `
+            <div class="wishlist-item-row">
+              <a href="product-details.html?id=${p.id}" class="flex-shrink-0">
+                <img src="${p.image}" alt="${p.name}" class="wishlist-item-img">
+              </a>
+              <div class="wishlist-item-info">
+                <span class="badge bg-cream text-dark small mb-1">${p.category}</span>
+                <h6 class="wishlist-item-title mb-1">
+                  <a href="product-details.html?id=${p.id}">${p.name}</a>
+                </h6>
+                <div class="d-flex align-items-baseline gap-2">
+                  <span class="fw-bold text-main">₹${p.price.toLocaleString("en-IN")}</span>
+                  ${p.originalPrice ? `<span class="small text-muted text-decoration-line-through">₹${p.originalPrice.toLocaleString("en-IN")}</span>` : ""}
+                </div>
+              </div>
+              <div class="wishlist-item-actions">
+                <button type="button" class="btn btn-gold btn-sm" data-add-cart-id="${p.id}" onclick="MayuriStore.addToCart('${p.id}');" title="Add to Cart">
+                  <i class="bi bi-bag-plus"></i> <span class="d-none d-sm-inline ms-1">Add to Cart</span>
+                </button>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-wishlist-remove-id="${p.id}" onclick="MayuriStore.toggleWishlist('${p.id}')" title="Remove from Wishlist">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+        <div class="pt-3 mt-3 border-top border-subtle d-flex justify-content-between align-items-center">
+          <a href="shop.html" class="btn btn-outline-crimson btn-sm" data-bs-dismiss="modal">
+            <i class="bi bi-arrow-left me-1"></i> Continue Shopping
+          </a>
+          <button type="button" class="btn btn-gold btn-sm" data-bs-dismiss="modal">
+            Done
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  function clearWishlist() {
+    wishlist = [];
+    saveWishlist();
+    showToast("Your Wishlist has been cleared.");
+  }
+
   function toggleWishlist(productId) {
     if (!window.JEWELRY_PRODUCTS) return;
     const product = window.JEWELRY_PRODUCTS.find((p) => p.id === productId);
@@ -384,6 +479,14 @@
       showToast(`Added <strong>${product.name}</strong> to Wishlist!`, "bi-heart-fill");
     }
     saveWishlist();
+  }
+
+  // Hook wishlist modal render on modal open
+  const wishModalEl = document.getElementById("wishlistModal");
+  if (wishModalEl) {
+    wishModalEl.addEventListener("show.bs.modal", () => {
+      renderWishlistModal();
+    });
   }
 
   // Global Wishlist Button Click
@@ -1760,6 +1863,7 @@
     updateCartBadges();
     updateWishlistBadges();
     renderCartDrawer();
+    renderWishlistModal();
     initCouponCopy();
     initContactForm();
     initNewsletter();
@@ -1782,6 +1886,8 @@
     removeCartItem,
     clearCart,
     toggleWishlist,
+    clearWishlist,
+    renderWishlistModal,
     openQuickView,
     showToast
   };

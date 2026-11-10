@@ -1700,12 +1700,13 @@ img {
   background-color: var(--surface-card);
   border: 1px dashed var(--gold-primary);
   border-radius: var(--radius-md);
-  padding: 1.5rem;
+  padding: 1.85rem 1.4rem 1.4rem;
   position: relative;
   transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin-top: 14px;
 }
 
 .offer-card:hover {
@@ -1722,33 +1723,44 @@ img {
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.25rem 0.75rem;
+  padding: 0.3rem 0.85rem;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
+  z-index: 3;
 }
 
 .coupon-box {
   background-color: var(--bg-secondary);
   border: 1.5px dashed var(--border-color);
   border-radius: var(--radius-sm);
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 0.85rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
   margin: 1rem 0;
 }
 
 .coupon-code {
   font-family: monospace;
   font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: 0.1em;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
   color: var(--crimson-primary);
 }
 
 .btn-copy-code {
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem 0.75rem;
   font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 1199.98px) {
+  .offer-card {
+    margin-top: 16px;
+    padding: 1.85rem 1.35rem 1.35rem;
+  }
 }
 
 /* Festive Promotional Offer Cards (Dual Equal Cards) */
@@ -1970,6 +1982,56 @@ img {
 
 .progress-bar-gold {
   background: var(--gold-sheen);
+}
+
+/* Wishlist Modal Items */
+.wishlist-item-row {
+  display: flex;
+  gap: 14px;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: center;
+}
+
+.wishlist-item-row:last-child {
+  border-bottom: none;
+}
+
+.wishlist-item-img {
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.wishlist-item-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.wishlist-item-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.wishlist-item-title a {
+  color: var(--text-main);
+}
+
+.wishlist-item-title a:hover {
+  color: var(--crimson-primary);
+}
+
+.wishlist-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 /* --- 12. FILTER SIDEBAR (SHOP PAGE) --- */
