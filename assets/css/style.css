@@ -171,6 +171,50 @@ img {
 .bg-crimson .text-white-50 {
   color: rgba(255, 255, 255, 0.92) !important;
 }
+
+/* Ensure headings inside dark backgrounds, text-white containers, and card-img-overlays are always crisp white */
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.card-img-overlay h1,
+.card-img-overlay h2,
+.card-img-overlay h3,
+.card-img-overlay h4,
+.card-img-overlay h5,
+.card-img-overlay h6,
+.card-img-overlay .card-title {
+  color: #ffffff !important;
+}
+
+.card-img-overlay {
+  background: linear-gradient(to top, rgba(10, 6, 12, 0.94) 0%, rgba(10, 6, 12, 0.55) 55%, rgba(10, 6, 12, 0.1) 85%, transparent 100%);
+}
+
+.card-img-overlay h1,
+.card-img-overlay h2,
+.card-img-overlay h3,
+.card-img-overlay h4,
+.card-img-overlay h5,
+.card-img-overlay h6,
+.card-img-overlay .card-title {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+.card-img-overlay p,
+.card-img-overlay .text-light,
+.card-img-overlay .text-white-50 {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
 .bg-card { background-color: var(--surface-card) !important; }
 
 /* Universal Gold Utility & High-Contrast Badges */
