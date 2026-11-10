@@ -2068,6 +2068,57 @@ img {
   color: var(--gold-primary);
 }
 
+/* --- ACCORDION THEME STYLES --- */
+.accordion-item {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-gold);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.accordion-button {
+  background-color: var(--surface-card);
+  color: var(--text-main);
+  padding: 1.15rem 1.35rem;
+  font-size: 1.02rem;
+  border-radius: 0;
+  transition: all var(--transition-fast);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--gold-light);
+  color: var(--gold-dark);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(201, 147, 38, 0.25);
+  border-color: var(--gold-primary);
+}
+
+.accordion-body {
+  padding: 1.25rem 1.4rem;
+  color: var(--text-muted);
+}
+
+[data-bs-theme="dark"] .accordion-item {
+  background-color: #1a101a;
+  border-color: rgba(201, 147, 38, 0.3);
+}
+
+[data-bs-theme="dark"] .accordion-button {
+  background-color: #1a101a;
+  color: #f1f5f9;
+}
+
+[data-bs-theme="dark"] .accordion-button:not(.collapsed) {
+  background-color: rgba(201, 147, 38, 0.2);
+  color: var(--gold-primary);
+}
+
+[data-bs-theme="dark"] .accordion-body {
+  color: #cbd5e1 !important;
+}
+
 /* --- 14. FOOTER (MATCHING CLEAN MODERN REFERENCE) --- */
 .site-footer {
   background-color: #0d1527;
