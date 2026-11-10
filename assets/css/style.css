@@ -592,13 +592,15 @@ img {
   z-index: 1050;
 }
 
-/* Desktop Hover Navigation for Dropdowns */
+/* Desktop Hover & Click Navigation for Dropdowns */
 @media (min-width: 992px) {
   .navbar-nav .nav-item.dropdown {
     position: relative;
   }
 
-  .navbar-nav .nav-item.dropdown:hover > .dropdown-menu {
+  .navbar-nav .nav-item.dropdown:hover > .dropdown-menu,
+  .navbar-nav .nav-item.dropdown.show > .dropdown-menu,
+  .navbar-nav .dropdown-menu.show {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
@@ -607,6 +609,10 @@ img {
   }
 
   .navbar-nav .dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: auto !important;
     display: block;
     opacity: 0;
     visibility: hidden;
@@ -614,6 +620,8 @@ img {
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
     pointer-events: none;
     margin-top: 0.25rem;
+    z-index: 1050;
+    min-width: 240px;
   }
 
   /* Invisible hover bridge so mouse cursor never loses hover across margin gap */
@@ -626,11 +634,11 @@ img {
     height: 12px;
   }
 
-  .navbar-nav .dropdown-menu.show {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(0) !important;
-    pointer-events: auto !important;
+  /* Dropdown caret flip when open or hovered */
+  .navbar-nav .nav-item.dropdown:hover .dropdown-toggle::after,
+  .navbar-nav .nav-item.dropdown.show .dropdown-toggle::after,
+  .navbar-nav .dropdown-toggle.show::after {
+    transform: rotate(180deg) !important;
   }
 }
 

@@ -1782,14 +1782,18 @@
 
       toggle.setAttribute("role", "button");
 
+      // Desktop Mouse Leave Handler (cleanly closes open dropdown when cursor leaves)
+      dropdown.addEventListener("mouseleave", function () {
+        if (window.innerWidth >= 992) {
+          menu.classList.remove("show");
+          toggle.classList.remove("show");
+          dropdown.classList.remove("show");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
       // Mobile & Desktop Click Handler
       toggle.addEventListener("click", function (e) {
-        // If on desktop (> 992px) and menu is already visible/open, clicking Home navigates directly to Home page
-        if (window.innerWidth >= 992 && (menu.classList.contains("show") || dropdown.matches(":hover"))) {
-          window.location.href = "index.html";
-          return;
-        }
-
         e.preventDefault();
         e.stopPropagation();
 
