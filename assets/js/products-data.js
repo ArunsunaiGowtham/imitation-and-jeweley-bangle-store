@@ -416,6 +416,74 @@ const JEWELRY_PRODUCTS = [
     isNewArrival: false,
     isFeatured: false
   },
+  {
+    id: "bang-07",
+    name: "Artisan Handcrafted Golden Beads & Charms Festive Bangle Stack",
+    category: "Bangles",
+    subCategory: "Traditional Jewellery",
+    price: 799,
+    originalPrice: 1199,
+    discount: "33% OFF",
+    rating: 4.8,
+    reviewsCount: 94,
+    badge: "Trending",
+    image: "assets/images/products/bangles-golden-beads-stack.jpg",
+    gallery: [
+      "assets/images/products/bangles-golden-beads-stack.jpg",
+      "assets/images/products/bangles-festive-glass-rainbow.jpg",
+      "assets/images/products/bangles-traditional-ornaments-stack.jpg"
+    ],
+    shortDesc: "Exquisite 24K gold-micron plated brass bangles decorated with shimmering multi-hue faceted crystal bead drops and delicate bells that chime softly with movement.",
+    specs: {
+      "Bangle Type": "Beaded Charm Bangles (Set of 6)",
+      "Available Sizes": "2.4, 2.6, 2.8",
+      "Base Material": "High-Grade Brass with Micron Gold Plating",
+      "Embellishments": "Faceted Multi-Color Crystal Beads & Micro Ghungroos",
+      "Closure": "Slip-On Comfort Fit",
+      "Quantity": "Stack of 6 Bangles",
+      "Occasion": "Festivals, Sangeet, Mehendi, Navratri Garba",
+      "Care": "Store in velvet pouch, avoid direct contact with water and perfume"
+    },
+    colors: ["Golden Multi-Color Beads", "Antique Gold with Ruby Beads"],
+    sizes: ["2.4", "2.6", "2.8"],
+    isBestSeller: false,
+    isNewArrival: true,
+    isFeatured: true
+  },
+  {
+    id: "bang-08",
+    name: "Royal Silver-Plated Crystal Petal Charm Bangles (Set of 4)",
+    category: "Bangles",
+    subCategory: "Fashion Jewellery",
+    price: 849,
+    originalPrice: 1249,
+    discount: "32% OFF",
+    rating: 4.9,
+    reviewsCount: 112,
+    badge: "Best Seller",
+    image: "assets/images/products/bangles-diamond-leaf-silver.jpg",
+    gallery: [
+      "assets/images/products/bangles-diamond-leaf-silver.jpg",
+      "assets/images/products/bangles-kashmiri-silver-charm.jpg",
+      "assets/images/products/bangles-pair-gold-embossed.jpg"
+    ],
+    shortDesc: "Premium rhodium silver finish designer bangles featuring faceted iridescent crystal beads, hanging droplet charms, and smooth comfort-fit edges for wedding receptions.",
+    specs: {
+      "Bangle Type": "Silver Finish Petal & Charm Bangles",
+      "Available Sizes": "2.4, 2.6, 2.8",
+      "Base Material": "Hypoallergenic Brass Alloy with Rhodium Silver Finish",
+      "Stone Type": "Iridescent Faceted Crystal Beads & Teardrop Charms",
+      "Closure": "Slip-On Comfort Band",
+      "Quantity": "Set of 4 Bangles",
+      "Occasion": "Cocktail Parties, Receptions, Festive Celebrations",
+      "Care": "Wipe with dry microfiber cloth after every wear, store in airtight pouch"
+    },
+    colors: ["Silver with Iridescent Drops", "Oxidized Silver"],
+    sizes: ["2.4", "2.6", "2.8"],
+    isBestSeller: true,
+    isNewArrival: false,
+    isFeatured: true
+  },
 
   // --- EARRINGS ---
   {
